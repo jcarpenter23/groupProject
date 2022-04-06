@@ -22,7 +22,6 @@ public class Main {
             System.out.println("THERE ARE NO FILES");
         } else
             for (int o = 0; o < storyFiles.length; o++) {
-                //System.out.println(o+ "\"" + deckFiles[o].getName());
                 storyList.add(storyFiles[o].getName());
             }
 
