@@ -25,7 +25,6 @@ public class Main {
                 storyList.add(storyFiles[o].getName());
             }
 
-
         return storyList;
     }
 }

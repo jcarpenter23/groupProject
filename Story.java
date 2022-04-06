@@ -1,3 +1,7 @@
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+
 public class Story {
     private String fileName;
 
@@ -7,6 +11,12 @@ public class Story {
 
     public void save(){
 
+    }
+
+    public void saveStories() throws IOException {
+        FileWriter fileWriter = new FileWriter(fileName, true);
+        PrintWriter write = new PrintWriter(fileWriter);
+        words.saveWords(write);
     }
 
 }
