@@ -24,7 +24,24 @@ public class Main {
                 storyList.add(storyFiles[o].getName());
             }
 
-
         return storyList;
     }
+    public static Story chooseStory() {
+        ArrayList<String> listOfStories;
+        listOfStories = getStory();
+        int storyChoice;
+        Scanner in = new Scanner(System.in);
+        for(int o = 0; o < listOfStories.size(); o ++) {
+            System.out.println(o + listOfStories.get(o));
+        }
+
+        System.out.println("Which deck would you like to use?");
+        storyChoice = in.nextInt();
+        Story story = new Story("storys/" + listOfStories.get(storyChoice));
+
+        System.out.println("This has been selected:" +listOfStories.get(storyChoice));
+
+        return story;
+    }
+
 }
