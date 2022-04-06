@@ -17,7 +17,6 @@ public class Main {
         };
         File storyFiles[] = f.listFiles(filter);
 
-
         if ( storyFiles == null ) {
             System.out.println("THERE ARE NO FILES");
         } else
