@@ -21,6 +21,21 @@ public class Story {
     }
 
     public void replace(String s){
+        String words[] = s.split(" ");
+        String finalWords[] = words;
+        int i = 0;
+        for(i = 0; i < words.length; i++) {
+            if (words[i].startsWith("*")) {
+                if ( words[i].contains("NOUN") ) {
+                    //Call in Get random Noun Method
+                    //Final Words goes here.
+                } else if ( words[i].contains("VERB") ) {
+                    //Call in Get random Verb Method
+                } else if ( words[i].contains("ABJECTIVE") ) {
+                    //Call in Get Adjective Method
+                }
+            }
+        }
         //create an array by using s.split
         //loop though it
         //if the word starts with *, call getRandomNoun/adj/verb
