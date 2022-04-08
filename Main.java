@@ -9,7 +9,6 @@ public class Main {
 
         //Button Listener 1
         class ButtonListener1 implements ActionListener{
-
             @Override
             public void actionPerformed(ActionEvent e) {
                 //method calls for specific button
@@ -17,7 +16,6 @@ public class Main {
         }
         //Button Listener 2
         class ButtonListener2 implements ActionListener{
-
             @Override
             public void actionPerformed(ActionEvent e) {
                 //method calls for specific button
@@ -25,7 +23,6 @@ public class Main {
         }
         //Button Listener 3
         class ButtonListener3 implements ActionListener{
-
             @Override
             public void actionPerformed(ActionEvent e) {
                 //method calls for specific button
