@@ -47,5 +47,7 @@ public class Main {
         JButton button3 = new JButton("View completed Stories");
         frame.getContentPane().add(button3);
         button1.addActionListener(new ButtonListener3());
+
+
     }
 }
