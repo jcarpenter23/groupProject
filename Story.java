@@ -11,17 +11,13 @@ public class Story {
         this.fileName = fileName;
     }
 
-    public void read(String fileName) {
+    public String read(String fileName) {
         Scanner in = new Scanner(System.in);
         String s = in.nextLine();
-
-        File inputFile = new File(fileName);
-        try {
-            in = new Scanner(inputFile);
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
+        while(in.hasNextLine()){
+            s=s+in.hasNextLine();
         }
-
+        return s;
     }
 
     /*public void replace(String input, String initial){
