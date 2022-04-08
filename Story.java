@@ -20,11 +20,14 @@ public class Story {
         return s;
     }
 
-    /*public void replace(String input, String initial){
+    public void replace(String s){
+        //create an array by using s.split
+        //loop though it
+        //if the word starts with *, call getRandomNoun/adj/verb
 
     }
 
-    public void save(){
+    /*public void save(){
 
     }
 
