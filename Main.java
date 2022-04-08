@@ -12,7 +12,7 @@ public class Main {
 
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                //method calls for specific button
             }
         }
         //Button Listener 2
@@ -20,7 +20,7 @@ public class Main {
 
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                //method calls for specific button
             }
         }
         //Button Listener 3
@@ -28,7 +28,7 @@ public class Main {
 
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                //method calls for specific button
             }
         }
 
@@ -43,9 +43,12 @@ public class Main {
         //GUI buttons
         JButton button1 = new JButton("Edit your own MadLib Story");
         frame.getContentPane().add(button1);
+        button1.addActionListener(new ButtonListener1());
         JButton button2 = new JButton("Read completed stories");
         frame.getContentPane().add(button2);
+        button1.addActionListener(new ButtonListener2());
         JButton button3 = new JButton("View completed Stories");
         frame.getContentPane().add(button3);
+        button1.addActionListener(new ButtonListener3());
     }
 }
