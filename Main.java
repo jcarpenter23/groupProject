@@ -1,13 +1,38 @@
 import javax.swing.*;
+import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 
 public class Main {
 
-
     public static void main(String[] args) {
 
-    //GUI setup (frame & labels)
+        //Button Listener 1
+        class ButtonListener1 implements ActionListener{
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+            }
+        }
+        //Button Listener 2
+        class ButtonListener2 implements ActionListener{
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+            }
+        }
+        //Button Listener 3
+        class ButtonListener3 implements ActionListener{
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+            }
+        }
+
+        //GUI setup (frame & labels)
         JFrame frame = new JFrame("MadLibs Creator");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.getContentPane().setLayout(new BoxLayout(frame.getContentPane(), BoxLayout.Y_AXIS));
