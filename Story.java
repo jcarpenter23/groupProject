@@ -39,7 +39,7 @@ public class Story {
                     wordTobeAdded = words[i];
                     finalWords.add(wordTobeAdded);
                     //Call in Get random Verb Method
-                } else if ( words[i].contains("ABJECTIVE") ) {
+                } else if ( words[i].contains("ADJECTIVE") ) {
                     wordTobeAdded = words[i];
                     finalWords.add(wordTobeAdded);
                     //Call in Get Adjective Method
