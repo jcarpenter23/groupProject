@@ -1,5 +1,7 @@
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Story {
@@ -22,16 +24,24 @@ public class Story {
 
     public void replace(String s){
         String words[] = s.split(" ");
-        String finalWords[] = words;
+        String wordTobeAdded = "";
+        String finalArray = null;
+        ArrayList<String> finalWords = new ArrayList<>();
         int i = 0;
         for(i = 0; i < words.length; i++) {
             if (words[i].startsWith("*")) {
                 if ( words[i].contains("NOUN") ) {
+                    wordTobeAdded = words[i];
+                    finalWords.add(wordTobeAdded);
                     //Call in Get random Noun Method
                     //Final Words goes here.
                 } else if ( words[i].contains("VERB") ) {
+                    wordTobeAdded = words[i];
+                    finalWords.add(wordTobeAdded);
                     //Call in Get random Verb Method
                 } else if ( words[i].contains("ABJECTIVE") ) {
+                    wordTobeAdded = words[i];
+                    finalWords.add(wordTobeAdded);
                     //Call in Get Adjective Method
                 }
             }
