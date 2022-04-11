@@ -17,7 +17,7 @@ public class Story {
         Scanner in = new Scanner(System.in);
         String s = in.nextLine();
         while(in.hasNextLine()){
-            s = s+in.hasNextLine();
+            s=s+in.hasNextLine();
         }
         return s;
     }
@@ -27,19 +27,20 @@ public class Story {
         String wordTobeAdded = "";
         String finalArray = null;
         ArrayList<String> finalWords = new ArrayList<>();
-        for (String word : words) {
-            if ( word.startsWith("*") ) {
-                if ( word.contains("NOUN") ) {
-                    wordTobeAdded = word;
+        int i = 0;
+        for(i = 0; i < words.length; i++) {
+            if (words[i].startsWith("*")) {
+                if ( words[i].contains("NOUN") ) {
+                    wordTobeAdded = words[i];
                     finalWords.add(wordTobeAdded);
                     //Call in Get random Noun Method
                     //Final Words goes here.
-                } else if ( word.contains("VERB") ) {
-                    wordTobeAdded = word;
+                } else if ( words[i].contains("VERB") ) {
+                    wordTobeAdded = words[i];
                     finalWords.add(wordTobeAdded);
                     //Call in Get random Verb Method
-                } else if ( word.contains("ADJECTIVE") ) {
-                    wordTobeAdded = word;
+                } else if ( words[i].contains("ABJECTIVE") ) {
+                    wordTobeAdded = words[i];
                     finalWords.add(wordTobeAdded);
                     //Call in Get Adjective Method
                 }
