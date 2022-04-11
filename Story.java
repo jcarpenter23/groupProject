@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class Story {
 
-    private String fileName;
+    private final String fileName;
     ArrayList<String> nouns;
     ArrayList<String> adjectives;
     ArrayList<String> verbs;
@@ -26,16 +26,15 @@ public class Story {
     }
 
     public void replace(String s){
-        String words[] = s.split(" ");
+        String[] words = s.split(" ");
         String wordTobeAdded = "";
-        String finalArray = null;
-        ArrayList<String> finalWords = new ArrayList<>();
+        String[] finalWords = new String[words.length];
         int i = 0;
         for(i = 0; i < words.length; i++) {
             if (words[i].startsWith("*")) {
                 if ( words[i].contains("NOUN") ) {
                     wordTobeAdded = w.getRandomNoun();
-                    finalWords.add(wordTobeAdded);
+                    finalWords.add(wordTobeAdded);//need to fix
                     //Call in Get random Noun Method
                     //Final Words goes here.
                 } else if ( words[i].contains("VERB") ) {
