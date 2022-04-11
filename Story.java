@@ -37,6 +37,7 @@ public class Story {
                     //Final Words goes here.
                 } else if ( words[i].contains("VERB") ) {
                     wordTobeAdded = words[i];
+
                     finalWords.add(wordTobeAdded);
                     //Call in Get random Verb Method
                 } else if ( words[i].contains("ADJECTIVE") ) {
