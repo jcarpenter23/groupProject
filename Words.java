@@ -7,6 +7,7 @@ public class Words {
     ArrayList<String> adjectives = new ArrayList<>();
     ArrayList<String> verbs= new ArrayList<>();
     String word;
+
     public Words(String word){
         this.word=word;
     }
