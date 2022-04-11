@@ -27,7 +27,7 @@ public class Story {
 
     public void replace(String s){
         String[] words = s.split(" ");
-        String wordTobeAdded = "";
+        String wordTobeAdded;
         String[] finalWords = new String[words.length];
         int i = 0;
         for(i = 0; i < words.length; i++) {
