@@ -66,33 +66,41 @@ public class Main {
 
 
     public static void main(String[] args) {
-        ArrayList<String> nouns = new ArrayList<String>();
-        ArrayList<String> adjectives=new ArrayList<String>();
-        ArrayList<String> verbs=new ArrayList<String>();
 
-        String userInput;
+        //try to create a Words object to save input to
+        String userInput = null;
+        Words user=new Words(userInput);
+
         Scanner scan = new Scanner(System.in);
+        //get user to input nouns, adjectives, and verbs
+        //save user's input to the user Words object
         System.out.println("Enter some nouns, type 'done' when finished");
         userInput = scan.nextLine();
         while(!userInput.equals("done")){
-            nouns.add(userInput); ///Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+            user.getNouns().add(userInput);
             userInput = scan.nextLine();
         }
         System.out.println("Enter some verbs, type 'done' when finished");
         userInput = scan.nextLine();
         while(!userInput.equals("done")){
-            verbs.add(userInput);
+            user.getVerbs().add(userInput);
             userInput = scan.nextLine();
         }
         System.out.println("Enter some adjectives, type 'done' when finished");
         userInput = scan.nextLine();
         while(!userInput.equals("done")){
-            adjectives.add(userInput);
+            user.getAdjectives().add(userInput);
             userInput = scan.nextLine();
         }
-        System.out.println("Nouns Entered: "+ nouns);
-        System.out.println("Verbs Entered: "+ verbs);
-        System.out.println("Adjectives Entered: "+adjectives);
+        System.out.println("Nouns Entered: "+ user.getNouns());
+        System.out.println("Verbs Entered: "+ user.getVerbs());
+        System.out.println("Adjectives Entered: "+ user.getAdjectives());
+        Story story1=new Story(".idea/MadLibOne.story");
+        story1.read();
+        story1.replace();
+        story1.saveStory();
+
+        System.out.println("Done Runnning");
 
         /*
         //Button Listener 1

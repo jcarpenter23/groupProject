@@ -16,10 +16,8 @@ public class Words {
         this.string=string;
     }
 
-    public void saveWords(PrintWriter write){
-        write.println(getNouns());
-        write.println(getAdjectives());
-        write.println(getVerbs());
+    public String getString(){
+        return this.string;
     }
     //Random Methods
     public String getRandomNoun(){
