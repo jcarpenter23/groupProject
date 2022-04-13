@@ -1,9 +1,45 @@
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
+import java.io.FilenameFilter;
+import java.util.ArrayList;
+import java.util.Scanner;
 
 
 public class Main {
+    public static ArrayList<String> getStory() {
+        //This creates a List of stories and stores them in a ArrayList
+        ArrayList<String> storyList = new ArrayList<>();
+        Scanner in = new Scanner(System.in);
+
+
+        //Leads the file to the directory with the stories
+        File f = new File("storys");
+
+        //This is to filter the names of the files
+        FilenameFilter filter = new FilenameFilter() {
+            @Override
+            public boolean accept(File file, String name) {
+                return name.endsWith("story");
+            }
+        };
+        //This is to story the inital files in a Array to hold them
+        File storyFile[] = f.listFiles(filter);
+
+
+        //To check if the storyFile array is empty or not
+        if (storyFile == null) {
+            System.out.println("THERE ARE NO FILES");
+        }
+        else
+            for (int o = 0; o < storyFile.length; o++) {
+                //System.out.println(o+ "\"" + deckFiles[o].getName());
+                storyList.add(storyFile[o].getName());
+            }//Reads through the Storyfiles and adds them to the arraylist
+
+        return storyList;
+    }
     public static void main(String[] args) {
 
         //Button Listener 1
