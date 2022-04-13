@@ -40,6 +40,28 @@ public class Main {
 
         return storyList;
     }
+
+    public static Story chooseStory() {
+        //This code is to Story the list of stories from the getStory method and allows the user to select the story
+        //they want to use.
+        ArrayList<String> listOfStory;
+        listOfStory = getStory();
+        int storyChoice;
+        Scanner in = new Scanner(System.in);
+        for(int o = 0; o < listOfStory.size(); o ++) {
+            System.out.println(o + listOfStory.get(o));
+        }
+
+        System.out.println("Which story would you like to use?");
+        storyChoice = in.nextInt();
+        Story story = new Story("storys/" + listOfStory.get(storyChoice));
+
+        System.out.println("This has been selected:" + listOfStory.get(storyChoice));
+
+        return story;
+    }
+
+
     public static void main(String[] args) {
 
         //Button Listener 1
