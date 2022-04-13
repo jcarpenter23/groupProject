@@ -5,9 +5,6 @@ import java.util.Scanner;
 public class Story {
 
     private String fileName;
-    ArrayList<String> nouns;
-    ArrayList<String> adjectives;
-    ArrayList<String> verbs;
 
     public Story (String fileName) {
         this.fileName = fileName;

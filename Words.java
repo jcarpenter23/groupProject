@@ -5,9 +5,9 @@ import java.util.Random;
 
 public class Words {
     private String string;
-    private ArrayList<String> nouns;
-    private ArrayList<String> adjectives;
-    private ArrayList<String> verbs;
+    public static ArrayList<String> nouns=new ArrayList<>();
+    public static ArrayList<String> adjectives=new ArrayList<>();
+    public static ArrayList<String> verbs=new ArrayList<>();
 
     public Words(String string) {
         this.string=string;
