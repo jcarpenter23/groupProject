@@ -4,14 +4,13 @@ import java.util.ArrayList;
 import java.util.Random;
 
 public class Words {
+    private String string;
     private ArrayList<String> nouns;
     private ArrayList<String> adjectives;
     private ArrayList<String> verbs;
 
-    public Words() {
-        ArrayList<String> nouns = new ArrayList<>();
-        ArrayList<String> adjectives = new ArrayList<>();
-        ArrayList<String> verbs = new ArrayList<>();
+    public Words(String string) {
+        this.string=string;
     }
 
     public void saveWords(PrintWriter write){

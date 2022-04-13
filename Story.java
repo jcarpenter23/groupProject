@@ -4,26 +4,27 @@ import java.util.Scanner;
 
 public class Story {
 
-    private final String fileName;
+    private String fileName;
     ArrayList<String> nouns;
     ArrayList<String> adjectives;
     ArrayList<String> verbs;
-    Words w=new Words();
 
     public Story (String fileName) {
         this.fileName = fileName;
     }
 
-    public String read(String fileName) {
+    public Words read(String fileName) {
         Scanner in = new Scanner(System.in);
         String s = in.nextLine();
         while(in.hasNextLine()){
             s=s+in.hasNextLine();
         }
-        return s;
+        Words story = new Words(s);
+        return story;
     }
 
     public String replace(String s){
+        Words w =new Words(s);
         ArrayList<String> words = new ArrayList<>(List.of(s.split(" ")));
         String wordTobeAdded;
         ArrayList<String> finalWords = new ArrayList<>(words.size());
