@@ -1,7 +1,5 @@
-import java.io.File;
-import java.io.FileNotFoundException;
 import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.List;
 import java.util.Scanner;
 
 public class Story {
@@ -25,31 +23,28 @@ public class Story {
         return s;
     }
 
-    public void replace(String s){
-        String[] words = s.split(" ");
+    public String replace(String s){
+        ArrayList<String> words = new ArrayList<>(List.of(s.split(" ")));
         String wordTobeAdded;
-        String[] finalWords = new String[words.length];
-        int i = 0;
-        for(i = 0; i < words.length; i++) {
-            if (words[i].startsWith("*")) {
-                if ( words[i].contains("NOUN") ) {
+        ArrayList<String> finalWords = new ArrayList<>(words.size());
+        for(int i = 0; i < (words.size()); i++) {
+            if (words.get(i).startsWith("*")) {
+                if ( words.get(i).contains("NOUN") ) {
                     wordTobeAdded = w.getRandomNoun();
-                    finalWords.add(wordTobeAdded);//need to fix
-                    //Call in Get random Noun Method
-                    //Final Words goes here.
-                } else if ( words[i].contains("VERB") ) {
-                    wordTobeAdded = words[i];
                     finalWords.add(wordTobeAdded);
-                    //Call in Get random Verb Method
-                } else if ( words[i].contains("ADJECTIVE") ) {
-                    //Call in Get Adjective Method
+                } else if ( words.get(i).contains("VERB") ) {
+                    wordTobeAdded = w.getRandomVerb();
+                    finalWords.add(wordTobeAdded);
+                } else if ( words.get(i).contains("ADJECTIVE") ) {
+                    wordTobeAdded = w.getRandomAdj();
+                    finalWords.add(wordTobeAdded);
                 }
             }
         }
-        //create an array by using s.split
-        //loop though it
-        //if the word starts with *, call getRandomNoun/adj/verb
-
+        //turn final words back into a string
+        String space = " ";
+        String joinedWords = String.join(space, finalWords);
+        return joinedWords;
     }
 
 
