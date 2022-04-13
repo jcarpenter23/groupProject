@@ -73,17 +73,17 @@ public class Main {
         Scanner scan = new Scanner(System.in);
         System.out.println("Enter some nouns, type 'done' when finished");
         userInput = scan.nextLine();
-        while(userInput!="done"){
+        while(!userInput.equals("done")){
             nouns.add(userInput); ///Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
         }
         System.out.println("Enter some verbs, type 'done' when finished");
         userInput = scan.nextLine();
-        while(userInput!="done"){
+        while(!userInput.equals("done")){
             verbs.add(userInput);
         }
         System.out.println("Enter some adjectives, type 'done' when finished");
         userInput = scan.nextLine();
-        while(userInput!="done"){
+        while(!userInput.equals("done")){
             adjectives.add(userInput);
         }
         System.out.println("Nouns Entered: "+ nouns);
