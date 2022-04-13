@@ -17,9 +17,10 @@ public class Main {
 
 
         //Leads the file to the directory with the stories
-        File f = new File("storys");
+        File f = new File("storys"); //make sure storys is in github repo
 
         //This is to filter the names of the files
+        //What class is this
         FilenameFilter filter = new FilenameFilter() {
             @Override
             public boolean accept(File file, String name) {
@@ -65,9 +66,9 @@ public class Main {
 
 
     public static void main(String[] args) {
-        ArrayList<String> nouns = new ArrayList<>();
-        ArrayList<String> adjectives=new ArrayList<>();
-        ArrayList<String> verbs=new ArrayList<>();
+        ArrayList<String> nouns = new ArrayList<String>();
+        ArrayList<String> adjectives=new ArrayList<String>();
+        ArrayList<String> verbs=new ArrayList<String>();
 
         String userInput;
         Scanner scan = new Scanner(System.in);
@@ -75,16 +76,19 @@ public class Main {
         userInput = scan.nextLine();
         while(!userInput.equals("done")){
             nouns.add(userInput); ///Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+            userInput = scan.nextLine();
         }
         System.out.println("Enter some verbs, type 'done' when finished");
         userInput = scan.nextLine();
         while(!userInput.equals("done")){
             verbs.add(userInput);
+            userInput = scan.nextLine();
         }
         System.out.println("Enter some adjectives, type 'done' when finished");
         userInput = scan.nextLine();
         while(!userInput.equals("done")){
             adjectives.add(userInput);
+            userInput = scan.nextLine();
         }
         System.out.println("Nouns Entered: "+ nouns);
         System.out.println("Verbs Entered: "+ verbs);

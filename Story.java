@@ -1,3 +1,6 @@
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -45,15 +48,17 @@ public class Story {
         return joinedWords;
     }
 
-
-    /*public void save(){
-
+    public void saveStories(String s){
+        FileWriter fileWriter = null;
+        try {
+            fileWriter = new FileWriter("MadLibOneWritten.story");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        PrintWriter output = new PrintWriter(fileWriter);
+        output.write(s);
+        output.flush();
+        output.close();
     }
-
-    public void saveStories() throws IOException {
-        FileWriter fileWriter = new FileWriter(fileName, true);
-        PrintWriter write = new PrintWriter(fileWriter);
-        words.saveWords(write);
-    } */
 
 }

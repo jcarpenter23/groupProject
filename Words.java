@@ -5,11 +5,14 @@ import java.util.Random;
 
 public class Words {
     private String string;
-    public static ArrayList<String> nouns=new ArrayList<>();
-    public static ArrayList<String> adjectives=new ArrayList<>();
-    public static ArrayList<String> verbs=new ArrayList<>();
+    private ArrayList<String> nouns;
+    private ArrayList<String> adjectives;
+    private ArrayList<String> verbs;
 
     public Words(String string) {
+        this.nouns = new ArrayList<String>();
+        this.adjectives=new ArrayList<String>();
+        this.verbs=new ArrayList<String>();
         this.string=string;
     }
 
