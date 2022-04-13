@@ -43,7 +43,7 @@ public class Main {
         JButton button2 = new JButton("Read completed stories");
         button1.addActionListener(new ButtonListener2());
         frame.getContentPane().add(button2);
-        JButton button3 = new JButton("View completed Stories");
+        JButton button3 = new JButton("View template stories");
         button1.addActionListener(new ButtonListener3());
         frame.getContentPane().add(button3);
 
