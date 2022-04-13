@@ -6,8 +6,11 @@ import java.util.Scanner;
 
 public class Story {
 
-    private String fileName;
-
+    private final String fileName;
+    ArrayList<String> nouns;
+    ArrayList<String> adjectives;
+    ArrayList<String> verbs;
+    Words w=new Words();
 
     public Story (String fileName) {
         this.fileName = fileName;
@@ -23,16 +26,15 @@ public class Story {
     }
 
     public void replace(String s){
-        String words[] = s.split(" ");
-        String wordTobeAdded = "";
-        String finalArray = null;
-        ArrayList<String> finalWords = new ArrayList<>();
+        String[] words = s.split(" ");
+        String wordTobeAdded;
+        String[] finalWords = new String[words.length];
         int i = 0;
         for(i = 0; i < words.length; i++) {
             if (words[i].startsWith("*")) {
                 if ( words[i].contains("NOUN") ) {
-                    wordTobeAdded = words[i];
-                    finalWords.add(wordTobeAdded);
+                    wordTobeAdded = w.getRandomNoun();
+                    finalWords.add(wordTobeAdded);//need to fix
                     //Call in Get random Noun Method
                     //Final Words goes here.
                 } else if ( words[i].contains("VERB") ) {
@@ -40,8 +42,6 @@ public class Story {
                     finalWords.add(wordTobeAdded);
                     //Call in Get random Verb Method
                 } else if ( words[i].contains("ADJECTIVE") ) {
-                    wordTobeAdded = words[i];
-                    finalWords.add(wordTobeAdded);
                     //Call in Get Adjective Method
                 }
             }
@@ -51,6 +51,7 @@ public class Story {
         //if the word starts with *, call getRandomNoun/adj/verb
 
     }
+
 
     /*public void save(){
 

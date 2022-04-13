@@ -1,16 +1,19 @@
+
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Random;
 
 public class Words {
-    ArrayList<String> nouns = new ArrayList<>();
-    ArrayList<String> adjectives = new ArrayList<>();
-    ArrayList<String> verbs= new ArrayList<>();
-    String word;
+    private ArrayList<String> nouns;
+    private ArrayList<String> adjectives;
+    private ArrayList<String> verbs;
 
-    public Words(String word){
-        this.word=word;
+    public Words() {
+        ArrayList<String> nouns = new ArrayList<>();
+        ArrayList<String> adjectives = new ArrayList<>();
+        ArrayList<String> verbs = new ArrayList<>();
     }
+
     public void saveWords(PrintWriter write){
         write.println(getNouns());
         write.println(getAdjectives());
