@@ -1,3 +1,4 @@
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -8,6 +9,7 @@ import java.util.Scanner;
 
 
 public class Main {
+
     public static ArrayList<String> getStory() {
         //This creates a List of stories and stores them in a ArrayList
         ArrayList<String> storyList = new ArrayList<>();
@@ -63,7 +65,32 @@ public class Main {
 
 
     public static void main(String[] args) {
+        ArrayList<String> nouns = new ArrayList<>();
+        ArrayList<String> adjectives=new ArrayList<>();
+        ArrayList<String> verbs=new ArrayList<>();
 
+        String userInput;
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Enter some nouns, type 'done' when finished");
+        userInput = scan.nextLine();
+        while(userInput!="done"){
+            nouns.add(userInput); ///Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+        }
+        System.out.println("Enter some verbs, type 'done' when finished");
+        userInput = scan.nextLine();
+        while(userInput!="done"){
+            verbs.add(userInput);
+        }
+        System.out.println("Enter some adjectives, type 'done' when finished");
+        userInput = scan.nextLine();
+        while(userInput!="done"){
+            adjectives.add(userInput);
+        }
+        System.out.println("Nouns Entered: "+ nouns);
+        System.out.println("Verbs Entered: "+ verbs);
+        System.out.println("Adjectives Entered: "+adjectives);
+
+        /*
         //Button Listener 1
         class ButtonListener1 implements ActionListener{
             @Override
@@ -104,7 +131,7 @@ public class Main {
         JButton button3 = new JButton("View template stories");
         button1.addActionListener(new ButtonListener3());
         frame.getContentPane().add(button3);
-
+        */
 
     }
 }
