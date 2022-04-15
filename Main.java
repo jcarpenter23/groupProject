@@ -30,7 +30,7 @@ public class Main {
     public static Story chooseStory() {
         int pickStory = getStories().size() + 1;
         while (pickStory > getStories().size()) {
-            System.out.println("Please choose an available deck.");
+            System.out.println("Please choose an available story.");
             printStories();
             Scanner scan = new Scanner(System.in);
             try {
