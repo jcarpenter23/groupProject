@@ -13,7 +13,6 @@ public class Main {
     public static ArrayList<String> getStories() {
         File storyDirectory = new File("stories/");
         String[] storyList = storyDirectory.list();
-        int count = 0;
         ArrayList<String> stories = new ArrayList<>();
         for (String story : storyList) {
             stories.add(story);
