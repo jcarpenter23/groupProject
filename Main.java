@@ -28,6 +28,7 @@ public class Main {
         }
     }
     public static Story chooseStory() {
+
         int pickStory = getStories().size() + 1;
         while (pickStory > getStories().size()) {
             System.out.println("Please choose an available story.");
@@ -35,10 +36,12 @@ public class Main {
             Scanner scan = new Scanner(System.in);
             try {
                 pickStory = scan.nextInt();
-            } catch (InputMismatchException e){pickStory = getStories().size() + 1;}
+            } catch (InputMismatchException e){
+                pickStory = getStories().size() + 1;
+            }
         }
         String storyToRead = getStories().get(pickStory - 1);
-        Story chosenStory = new Story(storyToRead);
+        Story chosenStory = new Story("stories/" + storyToRead);
         return chosenStory;
     }
     /*
@@ -92,7 +95,7 @@ public class Main {
         System.out.println("Nouns Entered: "+ user.getNouns());
         System.out.println("Verbs Entered: "+ user.getVerbs());
         System.out.println("Adjectives Entered: "+ user.getAdjectives());
-        Story story1= chooseStory();
+        Story story1 = chooseStory();
         story1.read();
         story1.replace(user);
         story1.saveStory();
