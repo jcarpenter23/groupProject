@@ -3,7 +3,6 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
-import java.io.FilenameFilter;
 import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -13,13 +12,13 @@ public class Main {
 
     public static ArrayList<String> getStories() {
         File storyDirectory = new File("stories/");
-        String[] deckList = storyDirectory.list();
+        String[] storyList = storyDirectory.list();
         int count = 0;
-        ArrayList<String> decks = new ArrayList<>();
-        for (String deck : deckList) {
-            decks.add(deck);
+        ArrayList<String> stories = new ArrayList<>();
+        for (String story : storyList) {
+            stories.add(story);
         }
-        return decks;
+        return stories;
     }
     public static void printStories() {
         getStories();
