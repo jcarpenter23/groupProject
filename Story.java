@@ -32,32 +32,23 @@ public class Story {
     public void replace(Words input){
         ArrayList<String> words = new ArrayList<>(List.of(this.wordsInStory.getString().split(" ")));
         String wordTobeAdded;
-        ArrayList<String> finalWords = new ArrayList<>(words.size());
         for(int i = 0; i < (words.size()); i++) {
             if (words.get(i).startsWith("*") && words.get(i).endsWith("*")) {
                 if ( words.get(i).contains("NOUN") ) {
                     wordTobeAdded = input.getRandomNoun();
                     words.remove(i);
                     words.add(i,wordTobeAdded);
-                    //finalWords.add(wordTobeAdded);
                 } else if ( words.get(i).contains("VERB") ) {
                     wordTobeAdded = input.getRandomVerb();
                     words.remove(i);
                     words.add(i,wordTobeAdded);
-                    //finalWords.add(wordTobeAdded);
                 } else if ( words.get(i).contains("ADJECTIVE") ) {
                     wordTobeAdded = input.getRandomAdj();
                     words.remove(i);
                     words.add(i,wordTobeAdded);
-                    //finalWords.add(wordTobeAdded);
                 }
             }
         }
-        //turn final words back into a string
-        //String space = " ";
-        //String joinedWords = String.join(space, finalWords);
-        //this.joinedWords=joinedWords;
-
         //turn words back into a String
         String space = " ";
         String joinedWords = String.join(space, words);

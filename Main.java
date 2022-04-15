@@ -5,63 +5,43 @@ import java.awt.event.ActionListener;
 import java.io.File;
 import java.io.FilenameFilter;
 import java.util.ArrayList;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 
 public class Main {
 
-    public static ArrayList<String> getStory() {
-        //This creates a List of stories and stores them in a ArrayList
-        ArrayList<String> storyList = new ArrayList<>();
-        Scanner in = new Scanner(System.in);
-
-
-        //Leads the file to the directory with the stories
-        File f = new File("storys"); //make sure storys is in github repo
-
-        //This is to filter the names of the files
-        //What class is this
-        FilenameFilter filter = new FilenameFilter() {
-            @Override
-            public boolean accept(File file, String name) {
-                return name.endsWith("story");
-            }
-        };
-        //This is to story the inital files in a Array to hold them
-        File storyFile[] = f.listFiles(filter);
-
-
-        //To check if the storyFile array is empty or not
-        if (storyFile == null) {
-            System.out.println("THERE ARE NO FILES");
+    public static ArrayList<String> getStories() {
+        File storyDirectory = new File("stories/");
+        String[] deckList = storyDirectory.list();
+        int count = 0;
+        ArrayList<String> decks = new ArrayList<>();
+        for (String deck : deckList) {
+            decks.add(deck);
         }
-        else
-            for (int o = 0; o < storyFile.length; o++) {
-                //System.out.println(o+ "\"" + deckFiles[o].getName());
-                storyList.add(storyFile[o].getName());
-            }//Reads through the Storyfiles and adds them to the arraylist
-
-        return storyList;
+        return decks;
     }
-
-    public static Story chooseStory() {
-        //This code is to Story the list of stories from the getStory method and allows the user to select the story
-        //they want to use.
-        ArrayList<String> listOfStory;
-        listOfStory = getStory();
-        int storyChoice;
-        Scanner in = new Scanner(System.in);
-        for(int o = 0; o < listOfStory.size(); o ++) {
-            System.out.println(o + listOfStory.get(o));
+    public static void printStories() {
+        getStories();
+        int count = 0;
+        for (int i = 0; i < getStories().size(); i++) {
+            count++;
+            System.out.println(count + ". " + getStories().get(i));
         }
-
-        System.out.println("Which story would you like to use?");
-        storyChoice = in.nextInt();
-        Story story = new Story("storys/" + listOfStory.get(storyChoice));
-
-        System.out.println("This has been selected:" + listOfStory.get(storyChoice));
-
-        return story;
+    }
+    public static Story chooseStory() {
+        int pickStory = getStories().size() + 1;
+        while (pickStory > getStories().size()) {
+            System.out.println("Please choose an available deck.");
+            printStories();
+            Scanner scan = new Scanner(System.in);
+            try {
+                pickStory = scan.nextInt();
+            } catch (InputMismatchException e){pickStory = getStories().size() + 1;}
+        }
+        String storyToRead = getStories().get(pickStory - 1);
+        Story chosenStory = new Story(storyToRead);
+        return chosenStory;
     }
 
 
