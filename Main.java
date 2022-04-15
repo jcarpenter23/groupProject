@@ -97,7 +97,7 @@ public class Main {
         System.out.println("Adjectives Entered: "+ user.getAdjectives());
         Story story1=new Story(".idea/MadLibOne.story");
         story1.read();
-        story1.replace();
+        story1.replace(user);
         story1.saveStory();
 
         System.out.println("Done Runnning");

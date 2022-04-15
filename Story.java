@@ -9,6 +9,7 @@ public class Story {
     private Words wordsInStory;
     private String joinedWords;
 
+
     public Story (String fileName) {
         this.fileName = fileName;
     }
@@ -28,30 +29,38 @@ public class Story {
         this.wordsInStory= wordsInStory;
     }
 
-    public void replace(){
+    public void replace(Words input){
         ArrayList<String> words = new ArrayList<>(List.of(this.wordsInStory.getString().split(" ")));
-        //^problems with this line, we want to get randomNouns/etc. from the "user"
-        // Words object input, not file input(wordsInStory)
-        //how do we separate this?
         String wordTobeAdded;
         ArrayList<String> finalWords = new ArrayList<>(words.size());
         for(int i = 0; i < (words.size()); i++) {
-            if (words.get(i).startsWith("*")) {
+            if (words.get(i).startsWith("*") && words.get(i).endsWith("*")) {
                 if ( words.get(i).contains("NOUN") ) {
-                    wordTobeAdded = wordsInStory.getRandomNoun();
-                    finalWords.add(wordTobeAdded);
+                    wordTobeAdded = input.getRandomNoun();
+                    words.remove(i);
+                    words.add(i,wordTobeAdded);
+                    //finalWords.add(wordTobeAdded);
                 } else if ( words.get(i).contains("VERB") ) {
-                    wordTobeAdded = wordsInStory.getRandomVerb();
-                    finalWords.add(wordTobeAdded);
+                    wordTobeAdded = input.getRandomVerb();
+                    words.remove(i);
+                    words.add(i,wordTobeAdded);
+                    //finalWords.add(wordTobeAdded);
                 } else if ( words.get(i).contains("ADJECTIVE") ) {
-                    wordTobeAdded = wordsInStory.getRandomAdj();
-                    finalWords.add(wordTobeAdded);
+                    wordTobeAdded = input.getRandomAdj();
+                    words.remove(i);
+                    words.add(i,wordTobeAdded);
+                    //finalWords.add(wordTobeAdded);
                 }
             }
         }
         //turn final words back into a string
+        //String space = " ";
+        //String joinedWords = String.join(space, finalWords);
+        //this.joinedWords=joinedWords;
+
+        //turn words back into a String
         String space = " ";
-        String joinedWords = String.join(space, finalWords);
+        String joinedWords = String.join(space, words);
         this.joinedWords=joinedWords;
     }
 
@@ -63,7 +72,8 @@ public class Story {
             e.printStackTrace();
         }
         PrintWriter output = new PrintWriter(fileWriter);
-        output.write(joinedWords);
+        output.write(joinedWords); //only writes joinedWords(user input words)
+        // into the file, we need the whole story
         output.flush();
         output.close();
     }
