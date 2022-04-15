@@ -73,7 +73,7 @@ public class Main {
         System.out.println("Nouns Entered: "+ user.getNouns());
         System.out.println("Verbs Entered: "+ user.getVerbs());
         System.out.println("Adjectives Entered: "+ user.getAdjectives());
-        Story story1=new Story(".idea/MadLibOne.story");
+        Story story1= chooseStory();
         story1.read();
         story1.replace(user);
         story1.saveStory();
