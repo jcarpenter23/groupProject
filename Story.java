@@ -13,6 +13,9 @@ public class Story {
     public Story (String fileName) {
         this.fileName = fileName;
     }
+    public Words getWordsInStory(){
+        return this.wordsInStory;
+    }
 
     public void read() {
         Scanner in = null;
