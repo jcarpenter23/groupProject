@@ -41,6 +41,25 @@ public class Main {
         Story chosenStory = new Story(storyToRead);
         return chosenStory;
     }
+    /*
+    ArrayList<String> listOfStory;
+    listOfStory = getStories();
+    int storyChoice;
+    Scanner in = new Scanner(System.in);
+        for(int o = 0; o < listOfStory.size(); o ++) {
+        System.out.println(o + listOfStory.get(o));
+    }
+
+        System.out.println("Which deck would you like to use?");
+    storyChoice = in.nextInt();
+    Story story = new Story("decks/" + listOfStory.get(storyChoice));
+
+        System.out.println("This has been selected:" +listOfStory.get(storyChoice));
+
+        return story;
+}
+
+     */
 
 
     public static void main(String[] args) {
