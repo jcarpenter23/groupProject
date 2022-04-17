@@ -17,6 +17,7 @@ public class Main {
         for (String story : storyList) {
             stories.add(story);
         }
+
         return stories;
     }
     public static void printStories() {
@@ -41,29 +42,10 @@ public class Main {
             }
         }
         String storyToRead = getStories().get(pickStory - 1);
+        System.out.println(storyToRead);
         Story chosenStory = new Story("stories/" + storyToRead);
         return chosenStory;
     }
-    /*
-    ArrayList<String> listOfStory;
-    listOfStory = getStories();
-    int storyChoice;
-    Scanner in = new Scanner(System.in);
-        for(int o = 0; o < listOfStory.size(); o ++) {
-        System.out.println(o + listOfStory.get(o));
-    }
-
-        System.out.println("Which deck would you like to use?");
-    storyChoice = in.nextInt();
-    Story story = new Story("decks/" + listOfStory.get(storyChoice));
-
-        System.out.println("This has been selected:" +listOfStory.get(storyChoice));
-
-        return story;
-}
-
-     */
-
 
     public static void main(String[] args) {
 
@@ -95,10 +77,18 @@ public class Main {
         System.out.println("Nouns Entered: "+ user.getNouns());
         System.out.println("Verbs Entered: "+ user.getVerbs());
         System.out.println("Adjectives Entered: "+ user.getAdjectives());
-        Story story1 = chooseStory();
+        getStories();
+        Story story1=chooseStory();
+        //turns words in story to a word object/big String
         story1.read();
+
+        //prints string of words without replacing
+        System.out.println(story1.getWordsInStory().getString());
+        //replaces user inputed words
         story1.replace(user);
+        //creates new file with replaced words
         story1.saveStory();
+
 
         System.out.println("Done Runnning");
 
