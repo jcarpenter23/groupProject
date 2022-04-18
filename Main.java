@@ -97,21 +97,31 @@ public class Main {
         class ButtonListener1 implements ActionListener{
             @Override
             public void actionPerformed(ActionEvent e) {
-                //method calls for button 1
+                //method calls for button 1 (edit madlib story)
+                - show stories
+                - allow user to pick
+                - call main to replace words
+                - save and print
             }
         }
         //Button Listener 2
         class ButtonListener2 implements ActionListener{
             @Override
             public void actionPerformed(ActionEvent e) {
-                //method calls for button 2
+                //method calls for button 2 (read completed stories)
+                - show stories
+                - allow user to pick
+                - print edited stories
             }
         }
         //Button Listener 3
         class ButtonListener3 implements ActionListener{
             @Override
             public void actionPerformed(ActionEvent e) {
-                //method calls for button 3
+                //method calls for button 3 (view unedited stories)
+                - show stories
+                - allow user to pick
+                - print blank templates
             }
         }
 
