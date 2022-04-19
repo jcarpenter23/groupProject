@@ -8,13 +8,18 @@ public class Story {
     private String fileName;
     private Words wordsInStory;
     private String joinedWords;
+    private int numWordsToInput;
+    private int numNouns;
+    private int numVerbs;
+    private int numAdjs;
 
 
     public Story (String fileName) {
         this.fileName = fileName;
     }
     public Words getWordsInStory(){
-        return this.wordsInStory;
+        this.wordsInStory=wordsInStory;
+        return wordsInStory;
     }
 
     public void read() {

@@ -5,29 +5,34 @@ import java.awt.event.ActionListener;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.InputMismatchException;
+import java.util.List;
 import java.util.Scanner;
 import java.awt.Color;
 
 
 public class Main {
     public static void main(String[] args) {
+
         //Button Listener - done button
         class doneButton implements ActionListener{
-            JTextField input;
+           // JTextArea input;
+            //String inputText= input.getText();
+            //ArrayList<String> nounies=new ArrayList<> (List.of(inputText.split(" ")));
+
+
             @Override
             public void actionPerformed(ActionEvent e) {
             JFrame finishedStory = new JFrame("Your story");
-            String text = input.getText();
-            Words wordsConvert = new Words(text);
+            //String text = input.getText();
+            //Words wordsConvert = new Words(text);
             finishedStory.setDefaultCloseOperation(finishedStory.EXIT_ON_CLOSE);
             finishedStory.getContentPane().setLayout(new BoxLayout(finishedStory.getContentPane(), BoxLayout.Y_AXIS));
             finishedStory.setSize(700,700);
             finishedStory.setVisible(true);
 
             }
-            doneButton (JTextField input) {
-                this.input = input;
-            }
+           // doneButton (JTextArea input) {
+             //   this.input = input;
         }
 
         //Edit Stories - Button Listener 1
@@ -40,23 +45,13 @@ public class Main {
                 frame1.getContentPane().setLayout(new BoxLayout(frame1.getContentPane(), BoxLayout.Y_AXIS));
                 frame1.setSize(700,700);
                 frame1.setVisible(true);
-                JLabel nounPrompt = new JLabel("Enter 10 nouns for your story: ");
-                JTextArea nounsText = new JTextArea();
-                nounsText.setPreferredSize(new Dimension(10,10));
+                JLabel nounPrompt = new JLabel("Enter 10 nouns, verbs, and adjectives for your story: ");
+                JTextArea input = new JTextArea(5,5);
                 frame1.getContentPane().add(nounPrompt);
-                frame1.getContentPane().add(nounsText);
-                JLabel verbPrompt = new JLabel("Enter 10 verbs for your story: ");
-                JTextArea verbText = new JTextArea();
-                verbText.setPreferredSize(new Dimension(10,10));
-                frame1.getContentPane().add(verbPrompt);
-                frame1.getContentPane().add(verbText);
-                JLabel adjectivePrompt = new JLabel("Enter 10 adjectives for your story: ");
-                JTextArea adjectiveText = new JTextArea();
-                adjectiveText.setPreferredSize(new Dimension(10,10));
-                frame1.getContentPane().add(adjectivePrompt);
-                frame1.getContentPane().add(adjectiveText);
+                frame1.getContentPane().add(input);
+                //done and back button
                 JButton doneButton = new JButton("DONE");
-                doneButton.addActionListener((new doneButton()));
+                //doneButton.addActionListener((new doneButton()));
                 frame1.getContentPane().add(doneButton);
                 JButton backButton1 = new JButton("BACK");
                 frame1.getContentPane().add(backButton1);
