@@ -61,6 +61,7 @@ public class Main {
                 }
 
 
+
                 //new frame
                 JFrame finishedStory = new JFrame("Your story");
 
@@ -68,8 +69,8 @@ public class Main {
                 finishedStory.getContentPane().setLayout(new BoxLayout(finishedStory.getContentPane(), BoxLayout.Y_AXIS));
                 finishedStory.setSize(700, 700);
                 finishedStory.setVisible(true);
-                //JLabel finalstory1 = new JLabel(s);
-                //finishedStory.getContentPane().add(finalstory1);
+                JLabel finalstory1 = new JLabel(s);
+                finishedStory.getContentPane().add(finalstory1);
 
 
 
