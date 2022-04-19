@@ -16,8 +16,8 @@ public class Main {
         //Button Listener - done button
 
         class doneButton implements ActionListener{
-           // JTextArea input;
-            //String inputText= input.getText();
+           JTextArea input;
+           String inputText= input.getText();
             //ArrayList<String> nounies=new ArrayList<> (List.of(inputText.split(" ")));
 
 
@@ -30,10 +30,24 @@ public class Main {
             finishedStory.getContentPane().setLayout(new BoxLayout(finishedStory.getContentPane(), BoxLayout.Y_AXIS));
             finishedStory.setSize(700,700);
             finishedStory.setVisible(true);
+            Words wordle=new Words(inputText);
+            ArrayList<String> wordies=new ArrayList<> (List.of(inputText.split(" ")));
+            int i=0;
+            while(i<=9){
+                    wordle.getNouns().add(wordies.get(i));
+                    i++;
+            }
+            while(i<=19){
+                    wordle.getVerbs().add(wordies.get(i));
+                    i++;
+            }
+            while(i<=29){
+                    wordle.getAdjectives().add(wordies.get(i));
+                    i++;
+            }
 
             }
-           // doneButton (JTextArea input) {
-             //   this.input = input;
+
         }
 
         //Edit Stories - Button Listener 1
