@@ -17,15 +17,15 @@ public class Main {
         //Button Listener - done button 1
         class doneButton1 implements ActionListener{
            JTextArea input;
-           String inputText= input.getText();
             //ArrayList<String> nounies=new ArrayList<> (List.of(inputText.split(" ")));
-
 
             @Override
             public void actionPerformed(ActionEvent e) {
 
                 Story story1 = new Story("stories/MadLibsTwo.story");
+                String inputText= input.getText();
                 Words wordle = new Words(inputText);
+
                 ArrayList<String> wordies = new ArrayList<>(List.of(inputText.split(" ")));
                 int i = 0;
                 while (i <= 9) {
@@ -68,6 +68,7 @@ public class Main {
                 finishedStory.getContentPane().setLayout(new BoxLayout(finishedStory.getContentPane(), BoxLayout.Y_AXIS));
                 finishedStory.setSize(700, 700);
                 finishedStory.setVisible(true);
+                JOptionPane.showMessageDialog(null, story1);
                 //JLabel finalstory1 = new JLabel(s);
                 //finishedStory.getContentPane().add(finalstory1);
 
