@@ -13,14 +13,20 @@ public class Main {
     public static void main(String[] args) {
         //Button Listener - done button
         class doneButton implements ActionListener{
+            JTextField input;
             @Override
             public void actionPerformed(ActionEvent e) {
             JFrame finishedStory = new JFrame("Your story");
+            String text = input.getText();
+            Words wordsConvert = new Words(text);
             finishedStory.setDefaultCloseOperation(finishedStory.EXIT_ON_CLOSE);
             finishedStory.getContentPane().setLayout(new BoxLayout(finishedStory.getContentPane(), BoxLayout.Y_AXIS));
             finishedStory.setSize(700,700);
             finishedStory.setVisible(true);
 
+            }
+            doneButton (JTextField input) {
+                this.input = input;
             }
         }
 
@@ -56,6 +62,7 @@ public class Main {
                 });
             }
         }
+
 
         //printing template button listeners
         class story1 implements ActionListener {
