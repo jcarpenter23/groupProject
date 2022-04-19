@@ -3,6 +3,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.List;
@@ -13,9 +14,8 @@ import java.awt.Color;
 public class Main {
     public static void main(String[] args) {
 
-        //Button Listener - done button
-
-        class doneButton implements ActionListener{
+        //Button Listener - done button 1
+        class doneButton1 implements ActionListener{
            JTextArea input;
            String inputText= input.getText();
             //ArrayList<String> nounies=new ArrayList<> (List.of(inputText.split(" ")));
@@ -23,29 +23,143 @@ public class Main {
 
             @Override
             public void actionPerformed(ActionEvent e) {
-            JFrame finishedStory = new JFrame("Your story");
-            //String text = input.getText();
-            //Words wordsConvert = new Words(text);
-            finishedStory.setDefaultCloseOperation(finishedStory.EXIT_ON_CLOSE);
-            finishedStory.getContentPane().setLayout(new BoxLayout(finishedStory.getContentPane(), BoxLayout.Y_AXIS));
-            finishedStory.setSize(700,700);
-            finishedStory.setVisible(true);
-            Words wordle=new Words(inputText);
-            ArrayList<String> wordies=new ArrayList<> (List.of(inputText.split(" ")));
-            int i=0;
-            while(i<=9){
+
+                Story story1 = new Story("stories/MadLibsTwo.story");
+                Words wordle = new Words(inputText);
+                ArrayList<String> wordies = new ArrayList<>(List.of(inputText.split(" ")));
+                int i = 0;
+                while (i <= 9) {
                     wordle.getNouns().add(wordies.get(i));
                     i++;
-            }
-            while(i<=19){
+                }
+                while (i <= 19) {
                     wordle.getVerbs().add(wordies.get(i));
                     i++;
-            }
-            while(i<=29){
+                }
+                while (i <= 29) {
                     wordle.getAdjectives().add(wordies.get(i));
                     i++;
+                }
+                //turns words in story to a word object/big String
+                story1.read();
+                //replaces user inputed words
+                story1.replace(wordle);
+                //creates new file with replaced words
+                story1.saveStory1();
+                //get the written story, convert to string
+                Scanner in = null;
+                try {
+                    in = new Scanner(new File("MadLibOneWritten.story"));
+                } catch (FileNotFoundException f) {
+                    f.printStackTrace();
+                }
+                String s = in.nextLine();
+                while(in.hasNextLine()){
+                    s=s+in.nextLine();
+                }
+
+
+                //new frame
+                JFrame finishedStory = new JFrame("Your story");
+
+                //String text = input.getText();
+                //Words wordsConvert = new Words(text);
+                finishedStory.setDefaultCloseOperation(finishedStory.EXIT_ON_CLOSE);
+                finishedStory.getContentPane().setLayout(new BoxLayout(finishedStory.getContentPane(), BoxLayout.Y_AXIS));
+                finishedStory.setSize(700, 700);
+                finishedStory.setVisible(true);
+                //JLabel finalstory1 = new JLabel(s);
+                //finishedStory.getContentPane().add(finalstory1);
+
+
+
+
+            }
+        }
+        //done button 2
+        class doneButton2 implements ActionListener{
+            JTextArea input;
+            String inputText= input.getText();
+            //ArrayList<String> nounies=new ArrayList<> (List.of(inputText.split(" ")));
+
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JFrame finishedStory = new JFrame("Your story");
+                //String text = input.getText();
+                //Words wordsConvert = new Words(text);
+                finishedStory.setDefaultCloseOperation(finishedStory.EXIT_ON_CLOSE);
+                finishedStory.getContentPane().setLayout(new BoxLayout(finishedStory.getContentPane(), BoxLayout.Y_AXIS));
+                finishedStory.setSize(700,700);
+                Story story2= new Story("stories/MadLibsTwo.story");
+                finishedStory.setVisible(true);
+                Words wordle=new Words(inputText);
+                ArrayList<String> wordies=new ArrayList<> (List.of(inputText.split(" ")));
+                int i=0;
+                while(i<=9){
+                    wordle.getNouns().add(wordies.get(i));
+                    i++;
+                }
+                while(i<=19){
+                    wordle.getVerbs().add(wordies.get(i));
+                    i++;
+                }
+                while(i<=29){
+                    wordle.getAdjectives().add(wordies.get(i));
+                    i++;
+                }
+                //turns words in story to a word object/big String
+                story2.read();
+
+
+                //replaces user inputed words
+                story2.replace(wordle);
+                //creates new file with replaced words
+                story2.saveStory2();
             }
 
+        }
+
+        //done button 3
+        class doneButton3 implements ActionListener{
+            JTextArea input;
+            String inputText= input.getText();
+            //ArrayList<String> nounies=new ArrayList<> (List.of(inputText.split(" ")));
+
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JFrame finishedStory = new JFrame("Your story");
+                //String text = input.getText();
+                //Words wordsConvert = new Words(text);
+                finishedStory.setDefaultCloseOperation(finishedStory.EXIT_ON_CLOSE);
+                finishedStory.getContentPane().setLayout(new BoxLayout(finishedStory.getContentPane(), BoxLayout.Y_AXIS));
+                finishedStory.setSize(700,700);
+                Story story3= new Story("stories/MadLibsThree.story");
+                finishedStory.setVisible(true);
+                Words wordle=new Words(inputText);
+                ArrayList<String> wordies=new ArrayList<> (List.of(inputText.split(" ")));
+                int i=0;
+                while(i<=9){
+                    wordle.getNouns().add(wordies.get(i));
+                    i++;
+                }
+                while(i<=19){
+                    wordle.getVerbs().add(wordies.get(i));
+                    i++;
+                }
+                while(i<=29){
+                    wordle.getAdjectives().add(wordies.get(i));
+                    i++;
+                }
+                //turns words in story to a word object/big String
+                story3.read();
+
+
+                //replaces user inputed words
+                story3.replace(wordle);
+                //creates new file with replaced words
+                story3.saveStory3();
             }
 
         }
@@ -64,9 +178,9 @@ public class Main {
                 frame1.getContentPane().add(nounPrompt);
                 frame1.getContentPane().add(input);
                 //done and back button
-                JButton doneButton = new JButton("DONE");
-                //doneButton.addActionListener((new doneButton()));
-                frame1.getContentPane().add(doneButton);
+                JButton doneButton1 = new JButton("DONE");
+                frame1.getContentPane().add(doneButton1);
+                doneButton1.addActionListener((new doneButton1()));
                 JButton backButton1 = new JButton("BACK");
                 frame1.getContentPane().add(backButton1);
                 backButton1.addActionListener(e1 -> {
@@ -89,9 +203,9 @@ public class Main {
                 frame1.getContentPane().add(nounPrompt);
                 frame1.getContentPane().add(input);
                 //done and back button
-                JButton doneButton = new JButton("DONE");
-                //doneButton.addActionListener((new doneButton()));
-                frame1.getContentPane().add(doneButton);
+                JButton doneButton2 = new JButton("DONE");
+                doneButton2.addActionListener((new doneButton2()));
+                frame1.getContentPane().add(doneButton2);
                 JButton backButton1 = new JButton("BACK");
                 frame1.getContentPane().add(backButton1);
                 backButton1.addActionListener(e1 -> {
@@ -114,9 +228,9 @@ public class Main {
                 frame1.getContentPane().add(nounPrompt);
                 frame1.getContentPane().add(input);
                 //done and back button
-                JButton doneButton = new JButton("DONE");
-                //doneButton.addActionListener((new doneButton()));
-                frame1.getContentPane().add(doneButton);
+                JButton doneButton3 = new JButton("DONE");
+                doneButton3.addActionListener((new doneButton3()));
+                frame1.getContentPane().add(doneButton3);
                 JButton backButton1 = new JButton("BACK");
                 frame1.getContentPane().add(backButton1);
                 backButton1.addActionListener(e1 -> {
@@ -371,12 +485,11 @@ public class Main {
         //turns words in story to a word object/big String
         story1.read();
 
-        //prints string of words without replacing
-        System.out.println(story1.getWordsInStory().getString());
+
         //replaces user inputed words
         story1.replace(user);
         //creates new file with replaced words
-        story1.saveStory();
+
 
     }
 }

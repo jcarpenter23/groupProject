@@ -63,7 +63,7 @@ public class Story {
         this.joinedWords=joinedWords;
     }
 
-    public void saveStory(){
+    public void saveStory1(){
         FileWriter fileWriter = null;
         try {
             fileWriter = new FileWriter("MadLibOneWritten.story");
@@ -71,8 +71,31 @@ public class Story {
             e.printStackTrace();
         }
         PrintWriter output = new PrintWriter(fileWriter);
-        output.write(joinedWords); //only writes joinedWords(user input words)
-        // into the file, we need the whole story
+        output.write(joinedWords);
+        output.flush();
+        output.close();
+    }
+    public void saveStory2(){
+        FileWriter fileWriter = null;
+        try {
+            fileWriter = new FileWriter("MadLibTwoWritten.story");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        PrintWriter output = new PrintWriter(fileWriter);
+        output.write(joinedWords);
+        output.flush();
+        output.close();
+    }
+    public void saveStory3(){
+        FileWriter fileWriter = null;
+        try {
+            fileWriter = new FileWriter("MadLibThreeWritten.story");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        PrintWriter output = new PrintWriter(fileWriter);
+        output.write(joinedWords);
         output.flush();
         output.close();
     }
