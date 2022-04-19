@@ -17,14 +17,16 @@ public class Main {
         //Button Listener - done button 1
         class doneButton1 implements ActionListener{
            JTextArea input;
-           String inputText= input.getText();
             //ArrayList<String> nounies=new ArrayList<> (List.of(inputText.split(" ")));
-
+            doneButton1 (JTextArea input){
+                this.input=input;
+            }
 
             @Override
             public void actionPerformed(ActionEvent e) {
 
                 Story story1 = new Story("stories/MadLibsTwo.story");
+                String inputText= input.getText();
                 Words wordle = new Words(inputText);
                 ArrayList<String> wordies = new ArrayList<>(List.of(inputText.split(" ")));
                 int i = 0;
@@ -62,8 +64,6 @@ public class Main {
                 //new frame
                 JFrame finishedStory = new JFrame("Your story");
 
-                //String text = input.getText();
-                //Words wordsConvert = new Words(text);
                 finishedStory.setDefaultCloseOperation(finishedStory.EXIT_ON_CLOSE);
                 finishedStory.getContentPane().setLayout(new BoxLayout(finishedStory.getContentPane(), BoxLayout.Y_AXIS));
                 finishedStory.setSize(700, 700);
@@ -180,7 +180,7 @@ public class Main {
                 //done and back button
                 JButton doneButton1 = new JButton("DONE");
                 frame1.getContentPane().add(doneButton1);
-                doneButton1.addActionListener((new doneButton1()));
+                doneButton1.addActionListener((new doneButton1(input)));
                 JButton backButton1 = new JButton("BACK");
                 frame1.getContentPane().add(backButton1);
                 backButton1.addActionListener(e1 -> {
