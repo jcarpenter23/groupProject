@@ -78,7 +78,9 @@ public class Main {
             JTextArea input;
             String inputText= input.getText();
             //ArrayList<String> nounies=new ArrayList<> (List.of(inputText.split(" ")));
-
+            doneButton2 (JTextArea input){
+                this.input=input;
+            }
 
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -134,8 +136,9 @@ public class Main {
         class doneButton3 implements ActionListener{
             JTextArea input;
             String inputText= input.getText();
-            //ArrayList<String> nounies=new ArrayList<> (List.of(inputText.split(" ")));
-
+            doneButton3 (JTextArea input){
+                this.input=input;
+            }
 
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -227,7 +230,7 @@ public class Main {
                 frame1.getContentPane().add(input);
                 //done and back button
                 JButton doneButton2 = new JButton("DONE");
-                doneButton2.addActionListener((new doneButton2()));
+                doneButton2.addActionListener((new doneButton2(input)));
                 frame1.getContentPane().add(doneButton2);
                 JButton backButton1 = new JButton("BACK");
                 frame1.getContentPane().add(backButton1);
@@ -252,7 +255,7 @@ public class Main {
                 frame1.getContentPane().add(input);
                 //done and back button
                 JButton doneButton3 = new JButton("DONE");
-                doneButton3.addActionListener((new doneButton3()));
+                doneButton3.addActionListener((new doneButton3(input)));
                 frame1.getContentPane().add(doneButton3);
                 JButton backButton1 = new JButton("BACK");
                 frame1.getContentPane().add(backButton1);
