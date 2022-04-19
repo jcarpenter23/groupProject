@@ -76,8 +76,6 @@ public class Main {
         //done button 2
         class doneButton2 implements ActionListener{
             JTextArea input;
-            String inputText= input.getText();
-            //ArrayList<String> nounies=new ArrayList<> (List.of(inputText.split(" ")));
             doneButton2 (JTextArea input){
                 this.input=input;
             }
@@ -85,6 +83,7 @@ public class Main {
             @Override
             public void actionPerformed(ActionEvent e) {
                 Story story2= new Story("stories/MadLibsTwo.story");
+                String inputText= input.getText();
                 Words wordle=new Words(inputText);
                 ArrayList<String> wordies=new ArrayList<> (List.of(inputText.split(" ")));
                 int i=0;
@@ -135,7 +134,7 @@ public class Main {
         //done button 3
         class doneButton3 implements ActionListener{
             JTextArea input;
-            String inputText= input.getText();
+
             doneButton3 (JTextArea input){
                 this.input=input;
             }
@@ -143,6 +142,7 @@ public class Main {
             @Override
             public void actionPerformed(ActionEvent e) {
                 Story story3= new Story("stories/MadLibsTwo.story");
+                String inputText= input.getText();
                 Words wordle=new Words(inputText);
                 ArrayList<String> wordies=new ArrayList<> (List.of(inputText.split(" ")));
                 int i=0;
@@ -163,7 +163,7 @@ public class Main {
                 //replaces user inputed words
                 story3.replace(wordle);
                 //creates new file with replaced words
-                story3.saveStory2();
+                story3.saveStory3();
 
                 Scanner in = null;
                 try {
@@ -177,7 +177,7 @@ public class Main {
                 }
 
                 //new frame
-                JFrame finishedStory3= new JFrame("Your story");
+                JFrame finishedStory3 = new JFrame("Your story");
 
                 finishedStory3.setDefaultCloseOperation(finishedStory3.EXIT_ON_CLOSE);
                 finishedStory3.getContentPane().setLayout(new BoxLayout(finishedStory3.getContentPane(), BoxLayout.Y_AXIS));
