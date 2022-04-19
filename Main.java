@@ -393,25 +393,6 @@ public class Main {
             }
         }
 
-        //View templates - Button Listener 3
-        class CompletedStories implements ActionListener{
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                //method calls for button 3 (view unedited stories)
-                JFrame frame3 = new JFrame("Completed Stories");
-                frame3.setDefaultCloseOperation(frame3.EXIT_ON_CLOSE);
-                frame3.getContentPane().setLayout(new BoxLayout(frame3.getContentPane(), BoxLayout.Y_AXIS));
-                JLabel templateWords = new JLabel("Here are your completed stories - which would you like to view?");
-                frame3.getContentPane().add(templateWords);
-
-                JButton backButton1 = new JButton("BACK");
-                frame3.getContentPane().add(backButton1);
-                backButton1.addActionListener(e1 -> {
-                    frame3.dispose();
-                });
-
-            }
-        }
 
         //GUI setup (frame, labels, and layout)
         JFrame frame = new JFrame("MadLibs Creator");
@@ -432,12 +413,6 @@ public class Main {
         button2.addActionListener(new TemplateStories());
         frame.getContentPane().add(button2);
         button2.setPreferredSize(new Dimension(50,50));
-
-
-        JButton button3 = new JButton("View Completed Stories");
-        button3.addActionListener(new CompletedStories());
-        frame.getContentPane().add(button3);
-        button3.setPreferredSize(new Dimension(50,50));
 
     }
 
