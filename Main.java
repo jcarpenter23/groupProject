@@ -82,14 +82,7 @@ public class Main {
 
             @Override
             public void actionPerformed(ActionEvent e) {
-                JFrame finishedStory = new JFrame("Your story");
-                //String text = input.getText();
-                //Words wordsConvert = new Words(text);
-                finishedStory.setDefaultCloseOperation(finishedStory.EXIT_ON_CLOSE);
-                finishedStory.getContentPane().setLayout(new BoxLayout(finishedStory.getContentPane(), BoxLayout.Y_AXIS));
-                finishedStory.setSize(700,700);
                 Story story2= new Story("stories/MadLibsTwo.story");
-                finishedStory.setVisible(true);
                 Words wordle=new Words(inputText);
                 ArrayList<String> wordies=new ArrayList<> (List.of(inputText.split(" ")));
                 int i=0;
@@ -107,12 +100,32 @@ public class Main {
                 }
                 //turns words in story to a word object/big String
                 story2.read();
-
-
                 //replaces user inputed words
                 story2.replace(wordle);
                 //creates new file with replaced words
                 story2.saveStory2();
+
+                Scanner in = null;
+                try {
+                    in = new Scanner(new File("MadLibTwoWritten.story"));
+                } catch (FileNotFoundException f) {
+                    f.printStackTrace();
+                }
+                String s = in.nextLine();
+                while(in.hasNextLine()){
+                    s=s+in.nextLine();
+                }
+
+                //new frame
+                JFrame finishedStory2 = new JFrame("Your story");
+
+                finishedStory2.setDefaultCloseOperation(finishedStory2.EXIT_ON_CLOSE);
+                finishedStory2.getContentPane().setLayout(new BoxLayout(finishedStory2.getContentPane(), BoxLayout.Y_AXIS));
+                finishedStory2.setSize(700, 700);
+                finishedStory2.setVisible(true);
+                JLabel finalstory2 = new JLabel("<html>"+ s);
+                finalstory2.setBounds(10,10,300,100);
+                finishedStory2.getContentPane().add(finalstory2);
             }
 
         }
@@ -126,14 +139,7 @@ public class Main {
 
             @Override
             public void actionPerformed(ActionEvent e) {
-                JFrame finishedStory = new JFrame("Your story");
-                //String text = input.getText();
-                //Words wordsConvert = new Words(text);
-                finishedStory.setDefaultCloseOperation(finishedStory.EXIT_ON_CLOSE);
-                finishedStory.getContentPane().setLayout(new BoxLayout(finishedStory.getContentPane(), BoxLayout.Y_AXIS));
-                finishedStory.setSize(700,700);
-                Story story3= new Story("stories/MadLibsThree.story");
-                finishedStory.setVisible(true);
+                Story story3= new Story("stories/MadLibsTwo.story");
                 Words wordle=new Words(inputText);
                 ArrayList<String> wordies=new ArrayList<> (List.of(inputText.split(" ")));
                 int i=0;
@@ -151,12 +157,32 @@ public class Main {
                 }
                 //turns words in story to a word object/big String
                 story3.read();
-
-
                 //replaces user inputed words
                 story3.replace(wordle);
                 //creates new file with replaced words
-                story3.saveStory3();
+                story3.saveStory2();
+
+                Scanner in = null;
+                try {
+                    in = new Scanner(new File("MadLibThreeWritten.story"));
+                } catch (FileNotFoundException f) {
+                    f.printStackTrace();
+                }
+                String s = in.nextLine();
+                while(in.hasNextLine()){
+                    s=s+in.nextLine();
+                }
+
+                //new frame
+                JFrame finishedStory3= new JFrame("Your story");
+
+                finishedStory3.setDefaultCloseOperation(finishedStory3.EXIT_ON_CLOSE);
+                finishedStory3.getContentPane().setLayout(new BoxLayout(finishedStory3.getContentPane(), BoxLayout.Y_AXIS));
+                finishedStory3.setSize(700, 700);
+                finishedStory3.setVisible(true);
+                JLabel finalstory3 = new JLabel("<html>"+ s);
+                finalstory3.setBounds(10,10,300,100);
+                finishedStory3.getContentPane().add(finalstory3);
             }
 
         }
