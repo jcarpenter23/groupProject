@@ -18,6 +18,9 @@ public class Main {
         class doneButton1 implements ActionListener{
            JTextArea input;
             //ArrayList<String> nounies=new ArrayList<> (List.of(inputText.split(" ")));
+            doneButton1 (JTextArea input){
+                this.input=input;
+            }
 
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -25,7 +28,6 @@ public class Main {
                 Story story1 = new Story("stories/MadLibsTwo.story");
                 String inputText= input.getText();
                 Words wordle = new Words(inputText);
-
                 ArrayList<String> wordies = new ArrayList<>(List.of(inputText.split(" ")));
                 int i = 0;
                 while (i <= 9) {
@@ -59,18 +61,16 @@ public class Main {
                 }
 
 
+
                 //new frame
                 JFrame finishedStory = new JFrame("Your story");
 
-                //String text = input.getText();
-                //Words wordsConvert = new Words(text);
                 finishedStory.setDefaultCloseOperation(finishedStory.EXIT_ON_CLOSE);
                 finishedStory.getContentPane().setLayout(new BoxLayout(finishedStory.getContentPane(), BoxLayout.Y_AXIS));
                 finishedStory.setSize(700, 700);
                 finishedStory.setVisible(true);
-                JOptionPane.showMessageDialog(null, story1);
-                //JLabel finalstory1 = new JLabel(s);
-                //finishedStory.getContentPane().add(finalstory1);
+                JLabel finalstory1 = new JLabel(s);
+                finishedStory.getContentPane().add(finalstory1);
 
 
 
@@ -181,7 +181,7 @@ public class Main {
                 //done and back button
                 JButton doneButton1 = new JButton("DONE");
                 frame1.getContentPane().add(doneButton1);
-                doneButton1.addActionListener((new doneButton1()));
+                doneButton1.addActionListener((new doneButton1(input)));
                 JButton backButton1 = new JButton("BACK");
                 frame1.getContentPane().add(backButton1);
                 backButton1.addActionListener(e1 -> {
