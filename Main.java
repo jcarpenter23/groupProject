@@ -15,7 +15,12 @@ public class Main {
         class doneButton implements ActionListener{
             @Override
             public void actionPerformed(ActionEvent e) {
-            //add and run replace, save method
+            JFrame finishedStory = new JFrame("Your story");
+            finishedStory.setDefaultCloseOperation(finishedStory.EXIT_ON_CLOSE);
+            finishedStory.getContentPane().setLayout(new BoxLayout(finishedStory.getContentPane(), BoxLayout.Y_AXIS));
+            finishedStory.setSize(700,700);
+            finishedStory.setVisible(true);
+
             }
         }
 
@@ -57,7 +62,7 @@ public class Main {
             @Override
             public void actionPerformed(ActionEvent e) {
             JFrame printStory1 = new JFrame("Story One");
-            printStory1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            printStory1.setDefaultCloseOperation(printStory1.EXIT_ON_CLOSE);
             printStory1.getContentPane().setLayout(new BoxLayout(printStory1.getContentPane(), BoxLayout.Y_AXIS));
             printStory1.setSize(700,700);
             printStory1.setVisible(true);
@@ -78,7 +83,7 @@ public class Main {
             @Override
             public void actionPerformed(ActionEvent e) {
                 JFrame printStory2 = new JFrame("Story Two");
-                printStory2.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                printStory2.setDefaultCloseOperation(printStory2.EXIT_ON_CLOSE);
                 printStory2.getContentPane().setLayout(new BoxLayout(printStory2.getContentPane(), BoxLayout.Y_AXIS));
                 printStory2.setSize(700,700);
                 printStory2.setVisible(true);
@@ -99,7 +104,7 @@ public class Main {
             @Override
             public void actionPerformed(ActionEvent e) {
                 JFrame printStory3 = new JFrame("Story Three");
-                printStory3.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                printStory3.setDefaultCloseOperation(printStory3.EXIT_ON_CLOSE);
                 printStory3.getContentPane().setLayout(new BoxLayout(printStory3.getContentPane(), BoxLayout.Y_AXIS));
                 printStory3.setSize(700,700);
                 printStory3.setVisible(true);
@@ -125,7 +130,7 @@ public class Main {
             public void actionPerformed(ActionEvent e) {
                 //method calls for button 2 (read completed stories)
                 JFrame frame2 = new JFrame("Template Stories");
-                frame2.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                frame2.setDefaultCloseOperation(frame2.EXIT_ON_CLOSE);
                 frame2.getContentPane().setLayout(new BoxLayout(frame2.getContentPane(), BoxLayout.Y_AXIS));
                 frame2.setSize(700,700);
                 frame2.setVisible(true);
@@ -159,7 +164,7 @@ public class Main {
             public void actionPerformed(ActionEvent e) {
                 //method calls for button 3 (view unedited stories)
                 JFrame frame3 = new JFrame("Completed Stories");
-                frame3.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                frame3.setDefaultCloseOperation(frame3.EXIT_ON_CLOSE);
                 frame3.getContentPane().setLayout(new BoxLayout(frame3.getContentPane(), BoxLayout.Y_AXIS));
                 JLabel templateWords = new JLabel("Here are your completed stories - which would you like to view?");
                 frame3.getContentPane().add(templateWords);
@@ -176,7 +181,7 @@ public class Main {
 
         //GUI setup (frame, labels, and layout)
         JFrame frame = new JFrame("MadLibs Creator");
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(frame.EXIT_ON_CLOSE);
         frame.getContentPane().setLayout(new BoxLayout(frame.getContentPane(), BoxLayout.Y_AXIS));
         frame.setSize(700,700);
         frame.setVisible(true);
