@@ -1,4 +1,4 @@
-My cubicle is *ADJECTIVE*. I have a *NOUN* on my desk next to a(n) *ADJECTIVE* *NOUN* . In my drawer, I also have a(n) *ADJECTIVE*
+My cubicle is *ADJECTIVE* . I have a *NOUN* on my desk next to a(n) *ADJECTIVE* *NOUN* . In my drawer, I also have a(n) *ADJECTIVE* 
 *NOUN* . One time a coworker tried to *VERB* a *NOUN* on my desk. I said to him, "Hey!" how would you like it if I *VERB* your
  *NOUN* ? I'll do it if you don't leave.
 My one complaint about my cubicle is that it is *ADJECTIVE* . I think everyone here at the office complains about this.
