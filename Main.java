@@ -49,9 +49,8 @@ public class Main {
             }
 
         }
-
         //Edit Stories - Button Listener 1
-        class EditStories implements ActionListener{
+        class storyone implements ActionListener{
             @Override
             public void actionPerformed(ActionEvent e) {
                 //method calls for button 1 (edit madlib story)
@@ -72,6 +71,82 @@ public class Main {
                 frame1.getContentPane().add(backButton1);
                 backButton1.addActionListener(e1 -> {
                     frame1.dispose();
+                });
+            }
+        }
+        //Edit Stories - Button Listener 1
+        class storytwo implements ActionListener{
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                //method calls for button 1 (edit madlib story)
+                JFrame frame1 = new JFrame("Edit MadLib Stories");
+                frame1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                frame1.getContentPane().setLayout(new BoxLayout(frame1.getContentPane(), BoxLayout.Y_AXIS));
+                frame1.setSize(700,700);
+                frame1.setVisible(true);
+                JLabel nounPrompt = new JLabel("Enter 10 nouns, verbs, and adjectives for your story: ");
+                JTextArea input = new JTextArea(5,5);
+                frame1.getContentPane().add(nounPrompt);
+                frame1.getContentPane().add(input);
+                //done and back button
+                JButton doneButton = new JButton("DONE");
+                //doneButton.addActionListener((new doneButton()));
+                frame1.getContentPane().add(doneButton);
+                JButton backButton1 = new JButton("BACK");
+                frame1.getContentPane().add(backButton1);
+                backButton1.addActionListener(e1 -> {
+                    frame1.dispose();
+                });
+            }
+        }
+        //Edit Stories - Button Listener 1
+        class storythree implements ActionListener{
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                //method calls for button 1 (edit madlib story)
+                JFrame frame1 = new JFrame("Edit MadLib Stories");
+                frame1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                frame1.getContentPane().setLayout(new BoxLayout(frame1.getContentPane(), BoxLayout.Y_AXIS));
+                frame1.setSize(700,700);
+                frame1.setVisible(true);
+                JLabel nounPrompt = new JLabel("Enter 10 nouns, verbs, and adjectives for your story: ");
+                JTextArea input = new JTextArea(5,5);
+                frame1.getContentPane().add(nounPrompt);
+                frame1.getContentPane().add(input);
+                //done and back button
+                JButton doneButton = new JButton("DONE");
+                //doneButton.addActionListener((new doneButton()));
+                frame1.getContentPane().add(doneButton);
+                JButton backButton1 = new JButton("BACK");
+                frame1.getContentPane().add(backButton1);
+                backButton1.addActionListener(e1 -> {
+                    frame1.dispose();
+                });
+            }
+        }
+        class pickStory implements ActionListener{
+            @Override
+            public void actionPerformed(ActionEvent e){
+                JFrame pick = new JFrame("Pick your Story");
+                pick.setDefaultCloseOperation(pick.EXIT_ON_CLOSE);
+                pick.getContentPane().setLayout(new BoxLayout(pick.getContentPane(), BoxLayout.Y_AXIS));
+                pick.setSize(700,700);
+                pick.setVisible(true);
+                JLabel pickPrompt = new JLabel("Which Story would you like to pick:");
+                pick.getContentPane().add(pickPrompt);
+                JButton storyone = new JButton("Story One");
+                storyone.addActionListener(new storyone());
+                JButton storytwo = new JButton("Story Two");
+                storytwo.addActionListener(new storytwo());
+                JButton storythree = new JButton("Story Three");
+                storythree.addActionListener(new storythree());
+                pick.getContentPane().add(storyone);
+                pick.getContentPane().add(storytwo);
+                pick.getContentPane().add(storythree);
+                JButton backButton1 = new JButton("BACK");
+                pick.getContentPane().add(backButton1);
+                backButton1.addActionListener(e1 -> {
+                    pick.dispose();
                 });
             }
         }
@@ -189,7 +264,6 @@ public class Main {
                 JLabel templateWords = new JLabel("Here are your completed stories - which would you like to view?");
                 frame3.getContentPane().add(templateWords);
 
-
                 JButton backButton1 = new JButton("BACK");
                 frame3.getContentPane().add(backButton1);
                 backButton1.addActionListener(e1 -> {
@@ -209,10 +283,10 @@ public class Main {
         JLabel label1 = new JLabel("Welcome to your MadLibs Creator. From the menu, click a button to start your adventure!");
         frame.getContentPane().add(label1);
         //GUI buttons
-        JButton button1 = new JButton("Edit your own MadLib Story");
-        button1.addActionListener(new EditStories());
-        frame.getContentPane().add(button1);
-        button1.setPreferredSize(new Dimension(50, 50));
+        JButton pickStory = new JButton("Edit your own MadLib Story");
+        pickStory.addActionListener(new pickStory());
+        frame.getContentPane().add(pickStory);
+        pickStory.setPreferredSize(new Dimension(50, 50));
 
         JButton button2 = new JButton("View Template Stories");
         button2.addActionListener(new TemplateStories());
