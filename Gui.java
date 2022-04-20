@@ -10,7 +10,9 @@ import java.util.Scanner;
 
 public class Gui {
     public static void gui() {
-        //Button Listener - done button 1
+
+        //done button for Story One - appears after input for story has been entered
+        //takes the input, replaces it within the template story, and prints out a new frame with the completed story
         class doneButton1 implements ActionListener {
             JTextArea input;
 
@@ -38,9 +40,9 @@ public class Gui {
                     wordle.getAdjectives().add(wordies.get(i));
                     i++;
                 }
-                //turns words in story to a word object/big String
+                //turns default words in story to a word object/big String
                 story1.read();
-                //replaces user inputed words
+                //replaces user words with new words
                 story1.replace(wordle);
                 //creates new file with replaced words
                 story1.saveStory1();
@@ -56,7 +58,7 @@ public class Gui {
                     s = s + in.nextLine();
                 }
 
-                //new frame
+                //creates new frame
                 JFrame finishedStory = new JFrame("Your story");
 
                 finishedStory.setDefaultCloseOperation(finishedStory.EXIT_ON_CLOSE);
@@ -74,7 +76,9 @@ public class Gui {
 
             }
         }
-        //done button 2
+
+        //done button for Story Two - appears after input for story has been entered
+        //takes the input, replaces it within the template story, and prints out a new frame with the completed story
         class doneButton2 implements ActionListener {
             JTextArea input;
 
@@ -101,9 +105,9 @@ public class Gui {
                     wordle.getAdjectives().add(wordies.get(i));
                     i++;
                 }
-                //turns words in story to a word object/big String
+                //turns default words in story to a word object/big String
                 story2.read();
-                //replaces user inputed words
+                //replaces user words
                 story2.replace(wordle);
                 //creates new file with replaced words
                 story2.saveStory2();
@@ -119,7 +123,7 @@ public class Gui {
                     s = s + in.nextLine();
                 }
 
-                //new frame
+                // creates new frame and buttons
                 JFrame finishedStory2 = new JFrame("Your story");
 
                 finishedStory2.setDefaultCloseOperation(finishedStory2.EXIT_ON_CLOSE);
@@ -135,10 +139,10 @@ public class Gui {
                 finalstory2.setBounds(10, 10, 300, 100);
                 finishedStory2.getContentPane().add(finalstory2);
             }
-
         }
 
-        //done button 3
+        //done button for Story Three - appears after input for story has been entered
+        //takes the input, replaces it within the template story, and prints out a new frame with the completed story
         class doneButton3 implements ActionListener {
             JTextArea input;
 
@@ -165,9 +169,9 @@ public class Gui {
                     wordle.getAdjectives().add(wordies.get(i));
                     i++;
                 }
-                //turns words in story to a word object/big String
+                //turns default words in story to a word object/big String
                 story3.read();
-                //replaces user inputed words
+                //replaces words
                 story3.replace(wordle);
                 //creates new file with replaced words
                 story3.saveStory3();
@@ -183,7 +187,7 @@ public class Gui {
                     s = s + in.nextLine();
                 }
 
-                //new frame
+                //creates new frame
                 JFrame finishedStory3 = new JFrame("Your story");
 
                 finishedStory3.setDefaultCloseOperation(finishedStory3.EXIT_ON_CLOSE);
@@ -199,9 +203,11 @@ public class Gui {
                 finalstory3.setBounds(10, 10, 300, 100);
                 finishedStory3.getContentPane().add(finalstory3);
             }
-
         }
-        //Edit Stories - Button Listener 1
+
+        //edit Story One (Button Listener)
+        //for Story One, the frame and text area is created for the user to input their 10 nouns, verbs and adjectives
+        //a done and back buttons are also created
         class storyone implements ActionListener {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -226,7 +232,10 @@ public class Gui {
                 });
             }
         }
-        //Edit Stories - Button Listener 1
+
+        //edit Story Two (Button Listener)
+        //for Story Two, the frame and text area is created for the user to input their 10 nouns, verbs and adjectives
+        //a done and back buttons are also created
         class storytwo implements ActionListener {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -251,7 +260,10 @@ public class Gui {
                 });
             }
         }
-        //Edit Stories - Button Listener 1
+
+        //edit Story Three (Button Listener)
+        //for Story Three, the frame and text area is created for the user to input their 10 nouns, verbs and adjectives
+        //a done and back buttons are also created
         class storythree implements ActionListener {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -276,6 +288,10 @@ public class Gui {
                 });
             }
         }
+
+        //this button listener runs after the user has decided that they want to "Edit a MadLib Story"
+        //creates a new frame, prompts them to pick which story they would like to edit
+        //creates a back button for the user to back out and pick another story
         class pickStory implements ActionListener {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -304,7 +320,9 @@ public class Gui {
         }
 
 
-        //printing template button listeners
+        //view template stories - Story One
+        //this button creates a new frame that then prints out the story template that is pulled from a file
+        //a back button is created to close the window and allows the user to pick another story
         class story1 implements ActionListener {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -326,6 +344,10 @@ public class Gui {
                 });
             }
         }
+
+        //view template stories - Story Two
+        //this button creates a new frame that then prints out the story template that is pulled from a file
+        //a back button is created to close the window and allows the user to pick another story
         class story2 implements ActionListener {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -347,6 +369,10 @@ public class Gui {
                 });
             }
         }
+
+        //view template stories - Story Three
+        //this button creates a new frame that then prints out the story template that is pulled from a file
+        //a back button is created to close the window and allows the user to pick another story
         class story3 implements ActionListener {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -371,7 +397,9 @@ public class Gui {
             }
         }
 
-        //Completed Stories - button listener 2
+        //view initial Template Stories Button
+        //creates a new frame, lists out the available stories for the user to choose from which would eventually display
+        //creates buttons for each story and a back button as well
         class TemplateStories implements ActionListener {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -406,7 +434,8 @@ public class Gui {
         }
 
 
-        //GUI setup (frame, labels, and layout)
+        //initial GUI setup (frame, labels, and layout)
+        //this creates the first frame the user sees on opening and prints out the buttons for acitivity options
         JFrame frame = new JFrame("MadLibs Creator");
         frame.setDefaultCloseOperation(frame.EXIT_ON_CLOSE);
         frame.getContentPane().setLayout(new BoxLayout(frame.getContentPane(), BoxLayout.Y_AXIS));
@@ -415,7 +444,7 @@ public class Gui {
         frame.setBackground(Color.black);
         JLabel label1 = new JLabel("Welcome to your MadLibs Creator. From the menu, click a button to start your adventure!");
         frame.getContentPane().add(label1);
-        //GUI buttons
+
         JButton pickStory = new JButton("Edit your own MadLib Story");
         pickStory.addActionListener(new pickStory());
         frame.getContentPane().add(pickStory);
