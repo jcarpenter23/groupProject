@@ -9,11 +9,11 @@ public class Story {
     private Words wordsInStory;
     private String joinedWords;
 
-
+    //Story constructor, takes a fileName as a parameter
     public Story (String fileName) {
         this.fileName = fileName;
     }
-
+    //reads file contents into a String, converts the String into a Words object
     public void read() {
         Scanner in = null;
         try {
@@ -28,7 +28,9 @@ public class Story {
         Words wordsInStory = new Words(s);
         this.wordsInStory= wordsInStory;
     }
-
+    //uses the Words object of file contents, splits it into an ArrayList of each word,
+    //if the word starts with a "*", replaces it with a random word of the specified type
+    //converts the ArrayList into a long String again
     public void replace(Words input){
         ArrayList<String> words = new ArrayList<>(List.of(this.wordsInStory.getString().split(" ")));
         String wordTobeAdded;
@@ -54,7 +56,7 @@ public class Story {
         String joinedWords = String.join(space, words);
         this.joinedWords=joinedWords;
     }
-
+    //Methods to write the long String(completed story) into a new file
     public void saveStory1(){
         FileWriter fileWriter = null;
         try {
