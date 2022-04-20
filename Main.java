@@ -17,7 +17,6 @@ public class Main {
         //Button Listener - done button 1
         class doneButton1 implements ActionListener{
            JTextArea input;
-            //ArrayList<String> nounies=new ArrayList<> (List.of(inputText.split(" ")));
             doneButton1 (JTextArea input){
                 this.input=input;
             }
@@ -67,6 +66,11 @@ public class Main {
                 finishedStory.getContentPane().setLayout(new BoxLayout(finishedStory.getContentPane(), BoxLayout.Y_AXIS));
                 finishedStory.setSize(700, 700);
                 finishedStory.setVisible(true);
+                JButton backButton1 = new JButton("BACK");
+                finishedStory.getContentPane().add(backButton1);
+                backButton1.addActionListener(e1 -> {
+                    finishedStory.dispose();
+                });
                 JLabel finalstory1 = new JLabel("<html>"+ s);
                 finalstory1.setBounds(10,10,300,100);
                 finishedStory.getContentPane().add(finalstory1);
@@ -124,6 +128,11 @@ public class Main {
                 finishedStory2.getContentPane().setLayout(new BoxLayout(finishedStory2.getContentPane(), BoxLayout.Y_AXIS));
                 finishedStory2.setSize(700, 700);
                 finishedStory2.setVisible(true);
+                JButton backButton1 = new JButton("BACK");
+                finishedStory2.getContentPane().add(backButton1);
+                backButton1.addActionListener(e1 -> {
+                    finishedStory2.dispose();
+                });
                 JLabel finalstory2 = new JLabel("<html>"+ s);
                 finalstory2.setBounds(10,10,300,100);
                 finishedStory2.getContentPane().add(finalstory2);
@@ -183,6 +192,11 @@ public class Main {
                 finishedStory3.getContentPane().setLayout(new BoxLayout(finishedStory3.getContentPane(), BoxLayout.Y_AXIS));
                 finishedStory3.setSize(700, 700);
                 finishedStory3.setVisible(true);
+                JButton backButton1 = new JButton("BACK");
+                finishedStory3.getContentPane().add(backButton1);
+                backButton1.addActionListener(e1 -> {
+                    finishedStory3.dispose();
+                });
                 JLabel finalstory3 = new JLabel("<html>"+ s);
                 finalstory3.setBounds(10,10,300,100);
                 finishedStory3.getContentPane().add(finalstory3);
