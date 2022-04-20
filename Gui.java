@@ -42,7 +42,7 @@ public class Gui {
                 }
                 //turns default words in story to a word object/big String
                 story1.read();
-                //replaces user words
+                //replaces user words with new words
                 story1.replace(wordle);
                 //creates new file with replaced words
                 story1.saveStory1();
