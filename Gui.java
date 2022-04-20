@@ -397,7 +397,7 @@ public class Gui {
             }
         }
 
-        //view Template Stories Button
+        //view initial Template Stories Button
         //creates a new frame, lists out the available stories for the user to choose from which would eventually display
         //creates buttons for each story and a back button as well
         class TemplateStories implements ActionListener {
