@@ -24,7 +24,7 @@ public class Main {
             @Override
             public void actionPerformed(ActionEvent e) {
 
-                Story story1 = new Story("stories/MadLibsTwo.story");
+                Story story1 = new Story("stories/MadLibsOne.story");
                 String inputText= input.getText();
                 Words wordle = new Words(inputText);
                 ArrayList<String> wordies = new ArrayList<>(List.of(inputText.split(" ")));
@@ -150,7 +150,7 @@ public class Main {
 
             @Override
             public void actionPerformed(ActionEvent e) {
-                Story story3= new Story("stories/MadLibsTwo.story");
+                Story story3= new Story("stories/MadLibsThree.story");
                 String inputText= input.getText();
                 Words wordle=new Words(inputText);
                 ArrayList<String> wordies=new ArrayList<> (List.of(inputText.split(" ")));
@@ -465,46 +465,5 @@ public class Main {
         System.out.println(storyToRead);
         Story chosenStory = new Story("stories/" + storyToRead);
         return chosenStory;
-    }
-    public static void menu(){
-        //try to create a Words object to save input to
-        String userInput = null;
-        Words user=new Words(userInput);
-
-        Scanner scan = new Scanner(System.in);
-        //get user to input nouns, adjectives, and verbs
-        //save user's input to the user Words object
-        System.out.println("Enter some nouns, type 'done' when finished");
-        userInput = scan.nextLine();
-        while(!userInput.equals("done")){
-            user.getNouns().add(userInput);
-            userInput = scan.nextLine();
-        }
-        System.out.println("Enter some verbs, type 'done' when finished");
-        userInput = scan.nextLine();
-        while(!userInput.equals("done")){
-            user.getVerbs().add(userInput);
-            userInput = scan.nextLine();
-        }
-        System.out.println("Enter some adjectives, type 'done' when finished");
-        userInput = scan.nextLine();
-        while(!userInput.equals("done")){
-            user.getAdjectives().add(userInput);
-            userInput = scan.nextLine();
-        }
-        System.out.println("Nouns Entered: "+ user.getNouns());
-        System.out.println("Verbs Entered: "+ user.getVerbs());
-        System.out.println("Adjectives Entered: "+ user.getAdjectives());
-        getStories();
-        Story story1=chooseStory();
-        //turns words in story to a word object/big String
-        story1.read();
-
-
-        //replaces user inputed words
-        story1.replace(user);
-        //creates new file with replaced words
-
-
     }
 }
