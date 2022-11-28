@@ -21,4 +21,19 @@ public class Question {
         
         this.answers = answers;
     }
+    
+    public Question(String question, ArrayList<String> answers) {
+        this.question = question;
+        this.category = "";
+        
+        while (answers.size() > 4) {
+            answers.remove(4);
+        }
+        
+        while (answers.size() < 4) {
+            answers.add("");
+        }
+        
+        this.answers = answers;
+    }
 }
