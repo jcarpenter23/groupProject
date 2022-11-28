@@ -4,7 +4,8 @@ import java.util.Collections;
 public class Question {
     private final String question;
     
-    private ArrayList<String> answers = null;
+    // the correct answer is always at index 0
+    private final ArrayList<String> answers;
     
     private final String category;
     
@@ -59,6 +60,7 @@ public class Question {
     }
     
     public String getCorrectAnswer() {
+        // the correct answer is always at index 0
         return answers.get(0);
     }
     
