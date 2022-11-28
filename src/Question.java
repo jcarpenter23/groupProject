@@ -63,7 +63,7 @@ public class Question {
     }
     
     public ArrayList<String> getShuffledAnswers() {
-        ArrayList<String> output = answers;
+        ArrayList<String> output = new ArrayList<>(answers);
         Collections.shuffle(output);
         return output;
     }
