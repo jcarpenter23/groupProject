@@ -1,9 +1,10 @@
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class Question {
     private final String question;
     
-    private final ArrayList<String> answers;
+    private ArrayList<String> answers = null;
     
     private final String category;
     
@@ -35,5 +36,35 @@ public class Question {
         }
         
         this.answers = answers;
+    }
+    
+    public String getQuestion() {
+        return question;
+    }
+    
+    public String getCategory() {
+        return category;
+    }
+    
+    public ArrayList<String> getAnswers() {
+        return answers;
+    }
+    
+    public String getAnswer(int index) {
+        try {
+            return answers.get(index);
+        } catch (IndexOutOfBoundsException e) {
+            throw new IllegalArgumentException(e);
+        }
+    }
+    
+    public String getCorrectAnswer() {
+        return answers.get(0);
+    }
+    
+    public ArrayList<String> getShuffledAnswers() {
+        ArrayList<String> output = answers;
+        Collections.shuffle(output);
+        return output;
     }
 }
