@@ -1,0 +1,112 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="FieldNamingConvention" enabled="true" level="WARNING" enabled_by_default="true">
+      <extension name="ConstantNamingConvention" enabled="true">
+        <option name="m_regex" value="[A-Z][A-Z_\d]*" />
+        <option name="m_minLength" value="0" />
+        <option name="m_maxLength" value="0" />
+      </extension>
+      <extension name="ConstantWithMutableFieldTypeNamingConvention" enabled="true">
+        <option name="m_regex" value="[a-z][A-Za-z\d]*" />
+        <option name="m_minLength" value="0" />
+        <option name="m_maxLength" value="0" />
+      </extension>
+      <extension name="EnumeratedConstantNamingConvention" enabled="true">
+        <option name="m_regex" value="[A-Z][A-Z_\d]*" />
+        <option name="m_minLength" value="0" />
+        <option name="m_maxLength" value="0" />
+      </extension>
+      <extension name="InstanceVariableNamingConvention" enabled="true">
+        <option name="m_regex" value="[a-z][A-Za-z\d]*" />
+        <option name="m_minLength" value="0" />
+        <option name="m_maxLength" value="0" />
+      </extension>
+      <extension name="StaticVariableNamingConvention" enabled="true">
+        <option name="m_regex" value="[a-z][A-Za-z\d]*" />
+        <option name="m_minLength" value="0" />
+        <option name="m_maxLength" value="0" />
+      </extension>
+    </inspection_tool>
+    <inspection_tool class="MultipleTopLevelClassesInFile" enabled="true" level="WARNING" enabled_by_default="true" />
+    <inspection_tool class="NewClassNamingConvention" enabled="true" level="WARNING" enabled_by_default="true">
+      <extension name="AbstractClassNamingConvention" enabled="true">
+        <option name="inheritDefaultSettings" value="true" />
+        <option name="m_regex" value="[A-Z][A-Za-z\d]*" />
+        <option name="m_minLength" value="8" />
+        <option name="m_maxLength" value="64" />
+      </extension>
+      <extension name="AnnotationNamingConvention" enabled="true">
+        <option name="inheritDefaultSettings" value="true" />
+        <option name="m_regex" value="[A-Z][A-Za-z\d]*" />
+        <option name="m_minLength" value="8" />
+        <option name="m_maxLength" value="64" />
+      </extension>
+      <extension name="ClassNamingConvention" enabled="true">
+        <option name="m_regex" value="[A-Z][A-Za-z\d]*" />
+        <option name="m_minLength" value="0" />
+        <option name="m_maxLength" value="0" />
+      </extension>
+      <extension name="EnumeratedClassNamingConvention" enabled="true">
+        <option name="inheritDefaultSettings" value="true" />
+        <option name="m_regex" value="[A-Z][A-Za-z\d]*" />
+        <option name="m_minLength" value="8" />
+        <option name="m_maxLength" value="64" />
+      </extension>
+      <extension name="InterfaceNamingConvention" enabled="true">
+        <option name="inheritDefaultSettings" value="true" />
+        <option name="m_regex" value="[A-Z][A-Za-z\d]*" />
+        <option name="m_minLength" value="8" />
+        <option name="m_maxLength" value="64" />
+      </extension>
+      <extension name="JUnitAbstractTestClassNamingConvention" enabled="true">
+        <option name="m_regex" value="[A-Z][A-Za-z\d]*TestCase" />
+        <option name="m_minLength" value="0" />
+        <option name="m_maxLength" value="0" />
+      </extension>
+      <extension name="JUnitTestClassNamingConvention" enabled="true">
+        <option name="m_regex" value="[A-Z][A-Za-z\d]*Test(s|Case)?|Test[A-Z][A-Za-z\d]*|IT(.*)|(.*)IT(Case)?" />
+        <option name="m_minLength" value="0" />
+        <option name="m_maxLength" value="0" />
+      </extension>
+      <extension name="TestSuiteNamingConvention" enabled="true">
+        <option name="m_regex" value="[A-Z][A-Za-z\d]*Suite" />
+        <option name="m_minLength" value="0" />
+        <option name="m_maxLength" value="0" />
+      </extension>
+      <extension name="TypeParameterNamingConvention" enabled="true" />
+    </inspection_tool>
+    <inspection_tool class="NewMethodNamingConvention" enabled="true" level="WARNING" enabled_by_default="true">
+      <extension name="InstanceMethodNamingConvention" enabled="true">
+        <option name="m_regex" value="[a-z][A-Za-z\d]*" />
+        <option name="m_minLength" value="0" />
+        <option name="m_maxLength" value="0" />
+      </extension>
+      <extension name="JUnit3MethodNamingConvention" enabled="true">
+        <option name="m_regex" value="test[A-Za-z_\d]*" />
+        <option name="m_minLength" value="0" />
+        <option name="m_maxLength" value="0" />
+      </extension>
+      <extension name="JUnit4MethodNamingConvention" enabled="true">
+        <option name="m_regex" value="[a-z][A-Za-z_\d]*" />
+        <option name="m_minLength" value="0" />
+        <option name="m_maxLength" value="0" />
+      </extension>
+      <extension name="NativeMethodNamingConvention" enabled="true">
+        <option name="m_regex" value="[a-z][A-Za-z\d]*" />
+        <option name="m_minLength" value="0" />
+        <option name="m_maxLength" value="0" />
+      </extension>
+      <extension name="StaticMethodNamingConvention" enabled="true">
+        <option name="m_regex" value="[a-z][A-Za-z\d]*" />
+        <option name="m_minLength" value="0" />
+        <option name="m_maxLength" value="0" />
+      </extension>
+      <extension name="TestNGMethodNamingConvention" enabled="true">
+        <option name="m_regex" value="[a-z][A-Za-z_\d]*" />
+        <option name="m_minLength" value="0" />
+        <option name="m_maxLength" value="0" />
+      </extension>
+    </inspection_tool>
+  </profile>
+</component>
