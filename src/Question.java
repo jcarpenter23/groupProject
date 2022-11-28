@@ -1,7 +1,24 @@
+import java.util.ArrayList;
+
 public class Question {
-    private String question;
+    private final String question;
     
-    private String[] answers;
+    private final ArrayList<String> answers;
     
-    private String category;
+    private final String category;
+    
+    public Question(String question, ArrayList<String> answers, String category) {
+        this.question = question;
+        this.category = category;
+        
+        while (answers.size() > 4) {
+            answers.remove(4);
+        }
+        
+        while (answers.size() < 4) {
+            answers.add("");
+        }
+        
+        this.answers = answers;
+    }
 }
