@@ -101,4 +101,11 @@ public class QuestionSet {
             throw new IllegalArgumentException(String.format("Unknown category: %s", category));
         }
     }
+    
+    public void forceCreateQuestion(String text, ArrayList<String> answers, String category) {
+        if (!categories.contains(category)) {
+            categories.add(category);
+        }
+        questions.add(new Question(text, answers, category));
+    }
 }
