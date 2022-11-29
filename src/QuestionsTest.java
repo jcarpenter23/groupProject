@@ -33,5 +33,11 @@ public class QuestionsTest {
         System.out.println(testQuestion.getCorrectAnswer());
         System.out.println(testQuestion.getShuffledAnswers());
         System.out.println(testQuestion.getAnswers());
+        
+        try{
+            testSet.save("sets/savingTest.set");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }

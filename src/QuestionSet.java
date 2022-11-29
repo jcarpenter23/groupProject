@@ -121,9 +121,31 @@ public class QuestionSet {
         
         File file = new File(filename);
         
-        try (FileOutputStream fileOutputStream = new FileOutputStream(filename)) {
-            //noinspection ResultOfMethodCallIgnored
-            file.createNewFile();
+        FileOutputStream fileOutputStream = new FileOutputStream(filename);
+        
+        //noinspection ResultOfMethodCallIgnored
+        file.createNewFile();
+
+        PrintWriter printWriter = new PrintWriter(fileOutputStream);
+        
+        String previousCategory = "";
+        
+        for (Question question : questions) {
+            if (!question.getCategory().equals(previousCategory)) {
+                if (!previousCategory.isBlank()) {
+                    printWriter.println(); // separator line
+                }
+                
+                printWriter.println(question.getCategory());
+            }
+            
+            printWriter.println(question.getQuestionText());
+            for (String answer : question.getAnswers()) {
+                printWriter.println(answer);
+            }
         }
+        
+        printWriter.flush();
+        printWriter.close();
     }
 }
