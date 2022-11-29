@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class Question {
+public class Question implements Comparable<Question> {
     private final String questionText;
     
     // the correct answer is always at index 0
@@ -76,5 +76,10 @@ public class Question {
             answersString.append("\n").append(answer);
         }
         return String.format("%s: %s%s", category, questionText, answersString);
+    }
+    
+    @Override
+    public int compareTo(Question o) {
+        return category.compareTo(o.getCategory());
     }
 }

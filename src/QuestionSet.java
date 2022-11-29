@@ -1,7 +1,6 @@
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Random;
 
 public class QuestionSet {
@@ -107,5 +106,24 @@ public class QuestionSet {
             categories.add(category);
         }
         questions.add(new Question(text, answers, category));
+    }
+    
+    public void sortByCategory() {
+        Collections.sort(questions);
+    }
+    
+    public void save() throws IOException {
+        save(filename);
+    }
+    
+    public void save(String filename) throws IOException {
+        sortByCategory();
+        
+        File file = new File(filename);
+        
+        try (FileOutputStream fileOutputStream = new FileOutputStream(filename)) {
+            //noinspection ResultOfMethodCallIgnored
+            file.createNewFile();
+        }
     }
 }
