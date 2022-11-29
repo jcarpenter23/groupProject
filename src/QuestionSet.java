@@ -90,7 +90,14 @@ public class QuestionSet {
         if (categories.contains(name)) {
             throw new IllegalStateException(String.format("Category %s already exists", name));
         }
+        validateCategoryName(name);
         categories.add(name);
+    }
+    
+    private static void validateCategoryName(String name) {
+        if (name.isBlank()) {
+            throw new IllegalArgumentException("Blank category names are not allowed");
+        }
     }
     
     public void createQuestion(String text, ArrayList<String> answers, String category) {
@@ -103,7 +110,7 @@ public class QuestionSet {
     
     public void forceCreateQuestion(String text, ArrayList<String> answers, String category) {
         if (!categories.contains(category)) {
-            categories.add(category);
+            createCategory(category);
         }
         questions.add(new Question(text, answers, category));
     }
