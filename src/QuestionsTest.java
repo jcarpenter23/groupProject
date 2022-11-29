@@ -26,7 +26,7 @@ public class QuestionsTest {
         System.out.println(testQuestion);
         System.out.println();
         
-        System.out.println(testQuestion.getQuestion());
+        System.out.println(testQuestion.getQuestionText());
         System.out.println(testQuestion.getCategory());
         System.out.println(testQuestion.getAnswers());
         System.out.println(testQuestion.getAnswer(3));

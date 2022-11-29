@@ -2,15 +2,15 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class Question {
-    private final String question;
+    private final String questionText;
     
     // the correct answer is always at index 0
     private final ArrayList<String> answers;
     
     private final String category;
     
-    public Question(String question, ArrayList<String> answers, String category) {
-        this.question = question;
+    public Question(String questionText, ArrayList<String> answers, String category) {
+        this.questionText = questionText;
         this.category = category;
         
         while (answers.size() > 4) {
@@ -24,8 +24,8 @@ public class Question {
         this.answers = answers;
     }
     
-    public Question(String question, ArrayList<String> answers) {
-        this.question = question;
+    public Question(String questionText, ArrayList<String> answers) {
+        this.questionText = questionText;
         this.category = "";
         
         while (answers.size() > 4) {
@@ -39,8 +39,8 @@ public class Question {
         this.answers = answers;
     }
     
-    public String getQuestion() {
-        return question;
+    public String getQuestionText() {
+        return questionText;
     }
     
     public String getCategory() {
@@ -75,6 +75,6 @@ public class Question {
         for (String answer : answers) {
             answersString.append("\n").append(answer);
         }
-        return String.format("%s: %s%s", category, question, answersString);
+        return String.format("%s: %s%s", category, questionText, answersString);
     }
 }
