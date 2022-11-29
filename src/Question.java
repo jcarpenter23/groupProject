@@ -69,4 +69,12 @@ public class Question {
         Collections.shuffle(output);
         return output;
     }
+    
+    public String toString() {
+        StringBuilder answersString = new StringBuilder();
+        for (String answer : answers) {
+            answersString.append("\n").append(answer);
+        }
+        return String.format("%s: %s%s", category, question, answersString);
+    }
 }
