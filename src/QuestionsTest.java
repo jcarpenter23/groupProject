@@ -1,17 +1,30 @@
-import java.util.ArrayList;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 
 public class QuestionsTest {
     public static void main(String[] args) {
-        ArrayList<String> testAnswers = new ArrayList<>() {
-            {
-                add("correct answer");
-                add("wrong answer 1");
-                add("wrong answer 2");
-                add("wrong answer 3");
-            }
-        };
+        QuestionSet testSet;
+        try {
+            testSet = new QuestionSet("sets/test.set");
+        } catch (FileNotFoundException e) {
+            System.out.println("where did the file go");
+            return;
+        } catch (IOException e) {
+            System.out.println("something broke");
+            return;
+        }
         
-        Question testQuestion = new Question("test question", testAnswers, "test category");
+        System.out.println(testSet);
+        System.out.println();
+        
+        System.out.println(testSet.getQuestions());
+        System.out.println(testSet.getQuestion(1));
+        System.out.println(testSet.getRandomQuestion());
+        
+        Question testQuestion = testSet.getQuestion(0);
+        
+        System.out.println(testQuestion);
+        System.out.println();
         
         System.out.println(testQuestion.getQuestion());
         System.out.println(testQuestion.getCategory());

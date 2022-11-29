@@ -45,7 +45,7 @@ public class QuestionSet {
                 try {
                     currentQuestion = br.readLine();
                     
-                    if (currentQuestion == null || currentQuestion.isEmpty()) {
+                    if (currentQuestion == null || currentQuestion.isBlank()) {
                         break; // blank line, so next line starts a new category, or end of file
                     }
                     

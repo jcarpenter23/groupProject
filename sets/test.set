@@ -1,0 +1,27 @@
+name of first category
+question 1
+correct answer to q1 (always the first answer)
+wrong answer
+another wrong answer
+last wrong answer of q1
+question 2: a question and its answers are always _ lines
+5 (correct answer)
+0
+1
+a billion
+
+blank line above means this is a new category
+
+another new category (empty categories are valid)
+(q3) a line with just whitespace is still a blank line (see above)
+
+blank correct answers are not treated as category breaks...
+
+...nor are blank wrong answers
+
+that last blank line is placed properly, so this is category 4
+(q4) everything make sense?
+yea!
+no
+nah
+nope
