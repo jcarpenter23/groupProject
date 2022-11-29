@@ -86,4 +86,19 @@ public class QuestionSet {
         }
         return output.toString();
     }
+    
+    public void createCategory(String name) {
+        if (categories.contains(name)) {
+            throw new IllegalStateException(String.format("Category %s already exists", name));
+        }
+        categories.add(name);
+    }
+    
+    public void createQuestion(String text, ArrayList<String> answers, String category) {
+        if (categories.contains(category)) {
+            questions.add(new Question(text, answers, category));
+        } else {
+            throw new IllegalArgumentException(String.format("Unknown category: %s", category));
+        }
+    }
 }
