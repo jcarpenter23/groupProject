@@ -101,7 +101,7 @@ public class GUI {
         @Override
         public void actionPerformed(ActionEvent e) {
 
-            JFrame quickArea = new JFrame("TRIVIA BOT - CREATE");
+            JFrame quickArea = new JFrame("Quick Play");
             quickArea.setDefaultCloseOperation(quickArea.DISPOSE_ON_CLOSE);
             quickArea.getContentPane().setLayout(new BoxLayout(quickArea.getContentPane(), BoxLayout.Y_AXIS));
 
@@ -109,6 +109,7 @@ public class GUI {
             JTextField playerEntry = new JTextField(20);
 
             JButton playerContinue = new JButton("Continue");
+            playerContinue.addActionListener(new continuedplayButtonListener());
 
 
             quickArea.getContentPane().add(players);
@@ -125,6 +126,39 @@ public class GUI {
             quickArea.setMinimumSize(quickArea.getSize());
             quickArea.setSize(300, 200);
             quickArea.setVisible(true);
+
+        }
+    }
+    static class continuedplayButtonListener implements ActionListener{
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+
+            JFrame playerNames = new JFrame("Quick Play");
+            playerNames.setDefaultCloseOperation(playerNames.DISPOSE_ON_CLOSE);
+            playerNames.getContentPane().setLayout(new BoxLayout(playerNames.getContentPane(), BoxLayout.Y_AXIS));
+
+            JLabel namesOfPlayers = new JLabel("Enter player names:");
+            JTextField playersInput = new JTextField(20);
+
+            JButton GamePlay = new JButton("Lets Play");
+            GamePlay.addActionListener(new continuedplayButtonListener());
+
+
+            playerNames.getContentPane().add(namesOfPlayers);
+            playerNames.getContentPane().add(playersInput);
+            playerNames.getContentPane().add(GamePlay);
+
+
+            namesOfPlayers.setVisible(true);
+            playersInput.setVisible(true);
+            GamePlay.setVisible(true);
+
+
+            playerNames.pack();
+            playerNames.setMinimumSize(playerNames.getSize());
+            playerNames.setSize(300, 200);
+            playerNames.setVisible(true);
 
         }
     }
