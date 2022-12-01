@@ -153,4 +153,8 @@ public class QuestionSet {
         printWriter.flush();
         printWriter.close();
     }
+    
+    public ArrayList<String> getCategories() {
+        return categories;
+    }
 }
