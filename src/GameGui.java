@@ -34,7 +34,7 @@ public class GameGui {
             }
         };
     
-        JFrame playArea = new JFrame("TRIVIA BOT - PLAY");
+        JFrame playArea = new JFrame("QUIZ TIME - PLAY");
         playArea.setDefaultCloseOperation(playArea.DISPOSE_ON_CLOSE);
         playArea.getContentPane().setLayout(new GridLayout(5, 1));
         

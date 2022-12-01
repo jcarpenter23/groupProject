@@ -314,7 +314,7 @@ public class GUI {
 
         //frame code
 
-        JFrame MainMenu = new JFrame("TriviaBot");
+        JFrame MainMenu = new JFrame("QUIZ TIME");
         
         MainMenu.setDefaultCloseOperation(MainMenu.EXIT_ON_CLOSE);
 
