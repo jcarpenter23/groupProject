@@ -155,6 +155,8 @@ public class QuestionSet {
             for (String answer : question.getAnswers()) {
                 printWriter.println(answer);
             }
+            
+            previousCategory = question.getCategory();
         }
         
         printWriter.flush();
