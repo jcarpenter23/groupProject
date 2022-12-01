@@ -18,9 +18,7 @@ public class GUI {
             
             JFrame playArea = new JFrame("TRIVIA BOT - PLAY");
             playArea.setDefaultCloseOperation(playArea.DISPOSE_ON_CLOSE);
-            
-            
-            
+
             JFileChooser fileChooser = new JFileChooser(SETS_DIRECTORY);
             fileChooser.showOpenDialog(playArea);
             
