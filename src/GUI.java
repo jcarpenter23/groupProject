@@ -26,14 +26,25 @@ public class GUI {
             JFrame createArea = new JFrame("TRIVIA BOT - CREATE");
             createArea.setDefaultCloseOperation(createArea.DISPOSE_ON_CLOSE);
             createArea.setSize(10000, 10000);
+            //display frame
             createArea.pack();
             createArea.setVisible(true);
 
+            //text boxes for Questions input
+            JTextField questionsBox = new JTextField(200);
+            JTextField answersBox = new JTextField(200);
+            createArea.getContentPane().add(questionsBox);
+            createArea.getContentPane().add(answersBox);
+            questionsBox.setVisible(true);
+            answersBox.setVisible(true);
+
+            //button for text boxes
+            JButton addQuestion = new JButton("ADD");
+            createArea.getContentPane().add(addQuestion);
+
+
         }
     }
-
-
-
 
 
     public static void main(String[] args) {
@@ -45,19 +56,23 @@ public class GUI {
         MainMenu.pack();
         MainMenu.setVisible(true);
 
+        //box layout
+        MainMenu.setLayout(new GridBagLayout());
+
+
         //Add Image
         JLabel triviaImage = new JLabel();
         triviaImage.setIcon(new ImageIcon("trivia.jpg"));
         Dimension size = triviaImage.getPreferredSize();
-        triviaImage.setBounds(50,30,size.width, size.height);
-        MainMenu.add(triviaImage);
+        triviaImage.setBounds(1000,1000,size.width, size.height);
+        MainMenu.add(triviaImage, new GridBagConstraints());
 
-        //box layout
-        MainMenu.setLayout(new GridBagLayout());
+
 
         //Title Text
         JLabel TitleText = new JLabel("Welcome to TriviaBot!");
-        MainMenu.add(TitleText, new GridBagConstraints());
+        MainMenu.getContentPane().add(TitleText);
+
         //Play Button
         JButton playButton = new JButton("PLAY");
         playButton.addActionListener(new playButtonListener());
