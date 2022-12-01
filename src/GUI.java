@@ -96,6 +96,39 @@ public class GUI {
         }
     }
 
+    static class quickButtonListener implements ActionListener{
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+
+            JFrame quickArea = new JFrame("TRIVIA BOT - CREATE");
+            quickArea.setDefaultCloseOperation(quickArea.DISPOSE_ON_CLOSE);
+            quickArea.getContentPane().setLayout(new BoxLayout(quickArea.getContentPane(), BoxLayout.Y_AXIS));
+
+            JLabel players = new JLabel("How many players will participate?");
+            JTextField playerEntry = new JTextField(20);
+
+            JButton playerContinue = new JButton("Continue");
+
+
+            quickArea.getContentPane().add(players);
+            quickArea.getContentPane().add(playerEntry);
+            quickArea.getContentPane().add(playerContinue);
+
+
+            players.setVisible(true);
+            playerEntry.setVisible(true);
+            playerContinue.setVisible(true);
+
+
+            quickArea.pack();
+            quickArea.setMinimumSize(quickArea.getSize());
+            quickArea.setSize(300, 200);
+            quickArea.setVisible(true);
+
+        }
+    }
+
 
     public static void main(String[] args) {
         //frame code
@@ -114,10 +147,9 @@ public class GUI {
         triviaImage.setBounds(1000,1000,size.width, size.height);
         MainMenu.add(triviaImage, new GridBagConstraints());
 
-
-
         //Title Text
         JLabel TitleText = new JLabel("Welcome to TriviaBot!");
+        TitleText.setVisible(true);
         MainMenu.getContentPane().add(TitleText);
 
         //Play Button
@@ -130,6 +162,11 @@ public class GUI {
         JButton createButton = new JButton("CREATE");
         createButton.addActionListener(new createButtonListener());
         MainMenu.add(createButton, new GridBagConstraints());
+
+        //Random Play
+        JButton quickplayButton = new JButton("QUICK PLAY");
+        quickplayButton.addActionListener(new quickButtonListener());
+        MainMenu.add(quickplayButton, new GridBagConstraints());
     
         
         MainMenu.pack();
