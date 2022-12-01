@@ -45,10 +45,17 @@ public class GUI {
             //text boxes and labels for Questions input
             JTextField categoryBox = new JTextField(10);
             JTextField questionsBox = new JTextField(10);
-            JTextField answersBox = new JTextField(10);
+            JTextField correctanswersBox = new JTextField(10);
+            JTextField wronganswersBox1 = new JTextField(10);
+            JTextField wronganswersBox2 = new JTextField(10);
+            JTextField wronganswersBox3 = new JTextField(10);
             JLabel categoryInstructions = new JLabel("What category will the question fit:");
             JLabel questionInstructions = new JLabel("Enter a trivia question to add:");
-            JLabel answerInstructions = new JLabel("Enter the answer to the question:");
+            JLabel answerInstructions = new JLabel("Enter the correct answer to the question:");
+            JLabel wrongInstructions1 = new JLabel("Enter an incorrect answer to the question:");
+            JLabel wrongInstructions2 = new JLabel("Enter a second incorrect answer to the question:");
+            JLabel wrongInstructions3 = new JLabel("Enter a third incorrect answer to the question:");
+
 
 
             createArea.getContentPane().add(categoryInstructions);
@@ -56,14 +63,26 @@ public class GUI {
             createArea.getContentPane().add(questionInstructions);
             createArea.getContentPane().add(questionsBox);
             createArea.getContentPane().add(answerInstructions);
-            createArea.getContentPane().add(answersBox);
+            createArea.getContentPane().add(correctanswersBox);
+            createArea.getContentPane().add(wrongInstructions1);
+            createArea.getContentPane().add(wronganswersBox1);
+            createArea.getContentPane().add(wrongInstructions2);
+            createArea.getContentPane().add(wronganswersBox2);
+            createArea.getContentPane().add(wrongInstructions3);
+            createArea.getContentPane().add(wronganswersBox3);
 
             categoryInstructions.setVisible(true);
             categoryBox.setVisible(true);
             questionInstructions.setVisible(true);
             questionsBox.setVisible(true);
             answerInstructions.setVisible(true);
-            answersBox.setVisible(true);
+            correctanswersBox.setVisible(true);
+            wrongInstructions1.setVisible(true);
+            wronganswersBox1.setVisible(true);
+            wrongInstructions2.setVisible(true);
+            wronganswersBox2.setVisible(true);
+            wrongInstructions3.setVisible(true);
+            wronganswersBox3.setVisible(true);
 
             //button for text boxes
             JButton addQuestion = new JButton("ADD");
