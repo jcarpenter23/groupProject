@@ -13,7 +13,7 @@ public class GUI {
     private static final String CUSTOM_SET_FILE = SETS_DIRECTORY + "/custom.set";
 
     // action listener for "play" button on main menu
-    static class playButtonListener implements ActionListener {
+    static class PlayButtonListener implements ActionListener {
         // begins standard game
         @Override
         public void actionPerformed(ActionEvent e) {
@@ -53,7 +53,7 @@ public class GUI {
     }
 
     // action listener for "create" button on main menu
-    static class createButtonListener implements ActionListener {
+    static class CreateButtonListener implements ActionListener {
         
         private static QuestionSet customSet = new QuestionSet(new ArrayList<>());
         
@@ -85,10 +85,10 @@ public class GUI {
             //text boxes and labels for Questions input
             JTextField categoryBox = new JTextField(10);
             JTextField questionsBox = new JTextField(10);
-            JTextField correctanswersBox = new JTextField(10);
-            JTextField wronganswersBox1 = new JTextField(10);
-            JTextField wronganswersBox2 = new JTextField(10);
-            JTextField wronganswersBox3 = new JTextField(10);
+            JTextField correctAnswersBox = new JTextField(10);
+            JTextField wrongAnswersBox1 = new JTextField(10);
+            JTextField wrongAnswersBox2 = new JTextField(10);
+            JTextField wrongAnswersBox3 = new JTextField(10);
             JLabel categoryInstructions = new JLabel("What category will the question fit:");
             JLabel questionInstructions = new JLabel("Enter a trivia question to add:");
             JLabel answerInstructions = new JLabel("Enter the correct answer to the question:");
@@ -103,30 +103,30 @@ public class GUI {
             createArea.getContentPane().add(questionInstructions);
             createArea.getContentPane().add(questionsBox);
             createArea.getContentPane().add(answerInstructions);
-            createArea.getContentPane().add(correctanswersBox);
+            createArea.getContentPane().add(correctAnswersBox);
             createArea.getContentPane().add(wrongInstructions1);
-            createArea.getContentPane().add(wronganswersBox1);
+            createArea.getContentPane().add(wrongAnswersBox1);
             createArea.getContentPane().add(wrongInstructions2);
-            createArea.getContentPane().add(wronganswersBox2);
+            createArea.getContentPane().add(wrongAnswersBox2);
             createArea.getContentPane().add(wrongInstructions3);
-            createArea.getContentPane().add(wronganswersBox3);
+            createArea.getContentPane().add(wrongAnswersBox3);
 
             categoryInstructions.setVisible(true);
             categoryBox.setVisible(true);
             questionInstructions.setVisible(true);
             questionsBox.setVisible(true);
             answerInstructions.setVisible(true);
-            correctanswersBox.setVisible(true);
+            correctAnswersBox.setVisible(true);
             wrongInstructions1.setVisible(true);
-            wronganswersBox1.setVisible(true);
+            wrongAnswersBox1.setVisible(true);
             wrongInstructions2.setVisible(true);
-            wronganswersBox2.setVisible(true);
+            wrongAnswersBox2.setVisible(true);
             wrongInstructions3.setVisible(true);
-            wronganswersBox3.setVisible(true);
+            wrongAnswersBox3.setVisible(true);
 
             //button for text boxes
             JButton addQuestion = new JButton("ADD");
-            addQuestion.addActionListener(new AddQuestionButtonListener(categoryBox, questionsBox, correctanswersBox, wronganswersBox1, wronganswersBox2, wronganswersBox3));
+            addQuestion.addActionListener(new AddQuestionButtonListener(categoryBox, questionsBox, correctAnswersBox, wrongAnswersBox1, wrongAnswersBox2, wrongAnswersBox3));
             createArea.getContentPane().add(addQuestion);
 
 
@@ -162,15 +162,15 @@ public class GUI {
         private final ArrayList<JTextField> textFields;
         
         // creates a new action listener with access to 6 text fields (one per question string)
-        public AddQuestionButtonListener(JTextField categoryBox, JTextField questionsBox, JTextField correctanswersBox, JTextField wronganswersBox1, JTextField wronganswersBox2, JTextField wronganswersBox3) {
+        public AddQuestionButtonListener(JTextField categoryBox, JTextField questionsBox, JTextField correctAnswersBox, JTextField wrongAnswersBox1, JTextField wrongAnswersBox2, JTextField wrongAnswersBox3) {
             textFields = new ArrayList<>() {
                 {
                     add(categoryBox);
                     add(questionsBox);
-                    add(correctanswersBox);
-                    add(wronganswersBox1);
-                    add(wronganswersBox2);
-                    add(wronganswersBox3);
+                    add(correctAnswersBox);
+                    add(wrongAnswersBox1);
+                    add(wrongAnswersBox2);
+                    add(wrongAnswersBox3);
                 }
             };
         }
@@ -195,13 +195,13 @@ public class GUI {
                 textField.setText("");
             }
             
-            createButtonListener.addToCustomSet(new Question(questionText, answers, category));
-            createButtonListener.saveCustomSet();
+            CreateButtonListener.addToCustomSet(new Question(questionText, answers, category));
+            CreateButtonListener.saveCustomSet();
         }
     }
 
     // action listener for "quick play" button on main menu
-    static class quickButtonListener implements ActionListener{
+    static class QuickButtonListener implements ActionListener{
 
         // begins quick play game
         @Override
@@ -215,7 +215,7 @@ public class GUI {
             JTextField playerEntry = new JTextField(20);
 
             JButton playerContinue = new JButton("Continue");
-            playerContinue.addActionListener(new continuedplayButtonListener());
+            playerContinue.addActionListener(new ContinuedPlayButtonListener());
 
 
             quickArea.getContentPane().add(players);
@@ -237,7 +237,7 @@ public class GUI {
     }
     
     // action listener for "continue button" on quick play menu
-    static class continuedplayButtonListener implements ActionListener{
+    static class ContinuedPlayButtonListener implements ActionListener{
 
         // opens player name entry
         @Override
@@ -253,7 +253,7 @@ public class GUI {
             JScrollPane scrollPane = new JScrollPane(playersInput);
 
             JButton GamePlay = new JButton("Lets Play");
-            GamePlay.addActionListener(new letsPlayButtonListener());
+            GamePlay.addActionListener(new LetsPlayButtonListener());
 
 
             playerNames.getContentPane().add(namesOfPlayers);
@@ -275,7 +275,7 @@ public class GUI {
     }
 
     //action listener for when the user decides to continue with quick play - asks if they are ready to begin
-    static class letsPlayButtonListener implements ActionListener{
+    static class LetsPlayButtonListener implements ActionListener{
 
         @Override
         public void actionPerformed(ActionEvent e) {
@@ -336,17 +336,17 @@ public class GUI {
 
         //Play Button
         JButton playButton = new JButton("SINGLE PLAYER");
-        playButton.addActionListener(new playButtonListener());
+        playButton.addActionListener(new PlayButtonListener());
         MainMenu.add(playButton, new GridBagConstraints());
 
         //Random Play
-        JButton quickplayButton = new JButton("MULTIPLAYER");
-        quickplayButton.addActionListener(new quickButtonListener());
-        MainMenu.add(quickplayButton, new GridBagConstraints());
+        JButton quickPlayButton = new JButton("MULTIPLAYER");
+        quickPlayButton.addActionListener(new QuickButtonListener());
+        MainMenu.add(quickPlayButton, new GridBagConstraints());
     
         //Create Button
         JButton createButton = new JButton("CREATE");
-        createButton.addActionListener(new createButtonListener());
+        createButton.addActionListener(new CreateButtonListener());
         MainMenu.add(createButton, new GridBagConstraints());
 
         MainMenu.pack();

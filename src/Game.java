@@ -11,7 +11,7 @@ public class Game {
     private ArrayList<Player> crownHolders;
     private ArrayList<Long> crownTimes;
     private Player winner;
-    private static final Player NO_ONE = new Player("No one", 0, 0);
+    private static final Player noOne = new Player("No one", 0, 0);
     
     // creates a new game
     public Game(int playerCount, File setFile, int crownsToWin) throws IOException {
@@ -29,7 +29,7 @@ public class Game {
         crownTimes = new ArrayList<>();
         
         for (int i = 0; i < questionSet.getCategories().size(); i++) {
-            crownHolders.add(NO_ONE);
+            crownHolders.add(noOne);
             crownTimes.add(Long.MAX_VALUE);
         }
     }
