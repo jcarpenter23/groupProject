@@ -53,7 +53,7 @@ public class GameGui {
     
         playArea.pack();
         playArea.setMinimumSize(playArea.getSize());
-        playArea.setSize(300, 200);
+        playArea.setSize(600, 400);
         playArea.setVisible(true);
         
         nextQuestion = questionSet.getRandomQuestion();
@@ -74,6 +74,8 @@ public class GameGui {
         public void actionPerformed(ActionEvent e) {
             if (!gameGui.onFeedbackScreen()) {
                 gameGui.showFeedbackScreen(button.getText());
+            } else {
+                gameGui.showNewQuestion();
             }
         }
     }
@@ -91,23 +93,28 @@ public class GameGui {
         
         answers = currentQuestion.getShuffledAnswers();
         
-        System.out.println(answers);
-        System.out.println(answerButtons);
-        
         for (int i = 0; i < 4; i++) {
             answerButtons.get(i).setText(answers.get(i));
         }
     }
     
     public void showFeedbackScreen(String answer) {
+        feedbackScreen = true;
         questionsAsked++;
+        nextQuestion = questionSet.getRandomQuestion();
         
         String feedbackString;
         if (answer.equals(currentQuestion.getCorrectAnswer())) {
             questionsCorrect++;
             feedbackString = "You got it!";
         } else {
-            feedbackString = "Nope, the correct answer was " + currentQuestion.getCorrectAnswer();
+            feedbackString = "Nope, the correct answer was " + currentQuestion.getCorrectAnswer() + ".";
+        }
+        feedbackString += " Correct answers: " + questionsCorrect + "/" + questionsAsked;
+        questionTextDisplay.setText(feedbackString);
+        
+        for (JButton button : answerButtons) {
+            button.setText("Next question: " + nextQuestion.getCategory());
         }
     }
 }

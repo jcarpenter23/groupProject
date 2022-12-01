@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="586378f7-bb8b-4aa3-86c5-d3fc75f6db1c" name="Changes" comment="added GameGui">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="586378f7-bb8b-4aa3-86c5-d3fc75f6db1c" name="Changes" comment="expanded functionality of GameGui">
       <change beforePath="$PROJECT_DIR$/src/GameGui.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameGui.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -186,7 +185,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669907754498</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="expanded functionality of GameGui">
+      <created>1669910350583</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1669910350583</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -227,6 +233,7 @@
     <MESSAGE value="added validateCorrectAnswer" />
     <MESSAGE value="trying to create a question with blank text now throws an exception (would break .set files otherwise)" />
     <MESSAGE value="added GameGui" />
-    <option name="LAST_COMMIT_MESSAGE" value="added GameGui" />
+    <MESSAGE value="expanded functionality of GameGui" />
+    <option name="LAST_COMMIT_MESSAGE" value="expanded functionality of GameGui" />
   </component>
 </project>
