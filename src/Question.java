@@ -77,4 +77,8 @@ public class Question implements Comparable<Question> {
     public int compareTo(Question o) {
         return category.compareTo(o.getCategory());
     }
+    
+    public boolean validateCorrectAnswer(String answer) {
+        return answer.equals(answers.get(0));
+    }
 }
