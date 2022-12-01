@@ -43,16 +43,23 @@ public class GUI {
 
 
             //text boxes and labels for Questions input
+            JTextField categoryBox = new JTextField(10);
             JTextField questionsBox = new JTextField(10);
             JTextField answersBox = new JTextField(10);
+            JLabel categoryInstructions = new JLabel("What category will the question fit:");
             JLabel questionInstructions = new JLabel("Enter a trivia question to add:");
             JLabel answerInstructions = new JLabel("Enter the answer to the question:");
 
+
+            createArea.getContentPane().add(categoryInstructions);
+            createArea.getContentPane().add(categoryBox);
             createArea.getContentPane().add(questionInstructions);
             createArea.getContentPane().add(questionsBox);
             createArea.getContentPane().add(answerInstructions);
             createArea.getContentPane().add(answersBox);
 
+            categoryInstructions.setVisible(true);
+            categoryBox.setVisible(true);
             questionInstructions.setVisible(true);
             questionsBox.setVisible(true);
             answerInstructions.setVisible(true);
