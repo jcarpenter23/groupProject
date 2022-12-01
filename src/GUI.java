@@ -36,17 +36,6 @@ public class GUI {
             }
             
             GameGui gameGui = new GameGui(questionSet);
-            
-            /*
-            JLabel testText = new JLabel(toOpen.getName());
-            playArea.getContentPane().add(testText);
-    
-            playArea.pack();
-            playArea.setMinimumSize(playArea.getSize());
-            playArea.setSize(300, 200);
-            playArea.setVisible(true);
-            
-             */
         }
     }
 
