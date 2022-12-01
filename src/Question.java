@@ -1,44 +1,27 @@
 import java.util.ArrayList;
 import java.util.Collections;
+/*
+ *
+ */
 
 public class Question implements Comparable<Question> {
     private final String questionText;
-    
-    // the correct answer is always at index 0
     private final ArrayList<String> answers;
-    
     private final String category;
     
     public Question(String questionText, ArrayList<String> answers, String category) {
         this.questionText = questionText;
         this.category = category;
         
-        while (answers.size() > 4) {
+        if (answers.size() > 4) {
             answers.remove(4);
         }
-        
-        while (answers.size() < 4) {
+        if (answers.size() < 4) {
             answers.add("");
         }
-        
         this.answers = answers;
     }
-    
-    public Question(String questionText, ArrayList<String> answers) {
-        this.questionText = questionText;
-        this.category = "";
-        
-        while (answers.size() > 4) {
-            answers.remove(4);
-        }
-        
-        while (answers.size() < 4) {
-            answers.add("");
-        }
-        
-        this.answers = answers;
-    }
-    
+
     public String getQuestionText() {
         return questionText;
     }

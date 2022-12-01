@@ -6,9 +6,7 @@ import java.util.Random;
 public class QuestionSet {
     private final ArrayList<Question> questions;
     private static final Random random = new Random();
-    
     private final String filename;
-    
     private final ArrayList<String> categories;
     
     public QuestionSet(ArrayList<Question> questions) {
@@ -107,7 +105,7 @@ public class QuestionSet {
             throw new IllegalArgumentException(String.format("Unknown category: %s", category));
         }
     }
-    
+
     public void forceCreateQuestion(String text, ArrayList<String> answers, String category) {
         if (!categories.contains(category)) {
             createCategory(category);

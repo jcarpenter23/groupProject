@@ -15,7 +15,7 @@ public class QuestionsTest {
         }
         
         System.out.println(testSet);
-        System.out.println();
+
         
         System.out.println(testSet.getQuestions());
         System.out.println(testSet.getQuestion(1));
