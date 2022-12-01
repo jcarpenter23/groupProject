@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="586378f7-bb8b-4aa3-86c5-d3fc75f6db1c" name="Changes" comment="fixed play button continued functionality">
+    <list default="true" id="586378f7-bb8b-4aa3-86c5-d3fc75f6db1c" name="Changes" comment="deleted test classes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI.java" afterDir="false" />
     </list>
@@ -203,7 +203,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669911115817</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="deleted test classes">
+      <created>1669911962650</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1669911962650</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -227,7 +234,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="delete idea" />
@@ -247,6 +253,7 @@
     <MESSAGE value="added GameGui" />
     <MESSAGE value="expanded functionality of GameGui" />
     <MESSAGE value="fixed play button continued functionality" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed play button continued functionality" />
+    <MESSAGE value="deleted test classes" />
+    <option name="LAST_COMMIT_MESSAGE" value="deleted test classes" />
   </component>
 </project>

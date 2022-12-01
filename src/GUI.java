@@ -249,18 +249,20 @@ public class GUI {
 
             JLabel namesOfPlayers = new JLabel("Enter player names:");
             JTextArea playersInput = new JTextArea();
+            
+            JScrollPane scrollPane = new JScrollPane(playersInput);
 
             JButton GamePlay = new JButton("Lets Play");
             GamePlay.addActionListener(new letsPlayButtonListener());
 
 
             playerNames.getContentPane().add(namesOfPlayers);
-            playerNames.getContentPane().add(playersInput);
+            playerNames.getContentPane().add(scrollPane);
             playerNames.getContentPane().add(GamePlay);
 
 
             namesOfPlayers.setVisible(true);
-            playersInput.setVisible(true);
+            scrollPane.setVisible(true);
             GamePlay.setVisible(true);
 
 
