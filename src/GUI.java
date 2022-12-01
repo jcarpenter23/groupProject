@@ -3,6 +3,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
 
 public class GUI {
     
@@ -14,14 +15,21 @@ public class GUI {
             
             JFrame playArea = new JFrame("TRIVIA BOT - PLAY");
             playArea.setDefaultCloseOperation(playArea.DISPOSE_ON_CLOSE);
-            playArea.setSize(10000, 10000);
-            playArea.pack();
-            playArea.setVisible(true);
+            
+            
             
             JFileChooser fileChooser = new JFileChooser(SETS_DIRECTORY);
             fileChooser.showOpenDialog(playArea);
             
+            File toOpen = fileChooser.getSelectedFile();
             
+            JLabel testText = new JLabel(toOpen.getName());
+            playArea.getContentPane().add(testText);
+    
+            playArea.pack();
+            playArea.setMinimumSize(playArea.getSize());
+            playArea.setSize(300, 200);
+            playArea.setVisible(true);
         }
     }
 
