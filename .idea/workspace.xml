@@ -4,13 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0c704235-69e6-4697-951f-8059f271cb1f" name="Changes" comment="added player class">
-      <change afterPath="$PROJECT_DIR$/src/Player.java" afterDir="false" />
+    <list default="true" id="586378f7-bb8b-4aa3-86c5-d3fc75f6db1c" name="Changes" comment="delete idea">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Question.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Question.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/QuestionSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/QuestionSet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/QuestionsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/QuestionsTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/trivia.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/trivia.jpg" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,11 +22,6 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="main" />
-      </map>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="UPDATE_TYPE" value="REBASE" />
   </component>
@@ -37,22 +29,22 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2GxLdcdHALQifGWH1aZpXzvDobe" />
-  <component name="ProjectLevelVcsManager">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.other" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true"
+  }
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\liamn\OneDrive\Documents\GitHub\groupProject" />
     </key>
   </component>
   <component name="RunManager">
@@ -67,7 +59,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="64f4cdc9-c5dc-41a8-80e2-d7de4ef59a5d" name="Changes" comment="" />
+      <changelist id="586378f7-bb8b-4aa3-86c5-d3fc75f6db1c" name="Changes" comment="delete idea" />
       <created>1667325378075</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -88,19 +80,7 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="main" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
+            <State />
           </value>
         </entry>
       </map>
@@ -108,7 +88,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="delete idea" />
-    <MESSAGE value="added player class" />
-    <option name="LAST_COMMIT_MESSAGE" value="added player class" />
+    <option name="LAST_COMMIT_MESSAGE" value="delete idea" />
   </component>
 </project>

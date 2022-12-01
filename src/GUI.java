@@ -47,9 +47,7 @@ public class GUI {
     public static void main(String[] args) {
         //frame code
         JFrame MainMenu = new JFrame("TriviaBot");
-        MainMenu.setSize(10000,10000);
-        MainMenu.pack();
-        MainMenu.setVisible(true);
+        
         MainMenu.setDefaultCloseOperation(MainMenu.EXIT_ON_CLOSE);
 
         //box layout
@@ -79,9 +77,15 @@ public class GUI {
         JButton createButton = new JButton("CREATE");
         createButton.addActionListener(new createButtonListener());
         MainMenu.add(createButton, new GridBagConstraints());
+    
+        
+        MainMenu.pack();
+        MainMenu.setMinimumSize(MainMenu.getSize());
+        MainMenu.setSize(300, 200);
+        MainMenu.setVisible(true);
         }
 
-
+        
  }
 
 
