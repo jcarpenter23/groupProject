@@ -335,21 +335,19 @@ public class GUI {
         MainMenu.getContentPane().add(TitleText);
 
         //Play Button
-        JButton playButton = new JButton("PLAY");
+        JButton playButton = new JButton("SINGLE PLAYER");
         playButton.addActionListener(new playButtonListener());
         MainMenu.add(playButton, new GridBagConstraints());
 
-
+        //Random Play
+        JButton quickplayButton = new JButton("MULTIPLAYER");
+        quickplayButton.addActionListener(new quickButtonListener());
+        MainMenu.add(quickplayButton, new GridBagConstraints());
+    
         //Create Button
         JButton createButton = new JButton("CREATE");
         createButton.addActionListener(new createButtonListener());
         MainMenu.add(createButton, new GridBagConstraints());
-
-        //Random Play
-        JButton quickplayButton = new JButton("QUICK PLAY");
-        quickplayButton.addActionListener(new quickButtonListener());
-        MainMenu.add(quickplayButton, new GridBagConstraints());
-    
 
         MainMenu.pack();
         MainMenu.setMinimumSize(MainMenu.getSize());
