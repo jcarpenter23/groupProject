@@ -1,5 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
 public class GameGui {
@@ -45,6 +47,7 @@ public class GameGui {
         
         playArea.add(questionTextDisplay);
         for (JButton button : answerButtons) {
+            button.addActionListener(new AnswerButtonEventListener(button, this));
             playArea.add(button);
         }
     
@@ -52,5 +55,59 @@ public class GameGui {
         playArea.setMinimumSize(playArea.getSize());
         playArea.setSize(300, 200);
         playArea.setVisible(true);
+        
+        nextQuestion = questionSet.getRandomQuestion();
+        showNewQuestion();
+    }
+    
+    static class AnswerButtonEventListener implements ActionListener {
+    
+        JButton button;
+        GameGui gameGui;
+        
+        public AnswerButtonEventListener(JButton button, GameGui gameGui) {
+            this.button = button;
+            this.gameGui = gameGui;
+        }
+        
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            if (!gameGui.onFeedbackScreen()) {
+                gameGui.showFeedbackScreen(button.getText());
+            }
+        }
+    }
+    
+    public boolean onFeedbackScreen() {
+        return feedbackScreen;
+    }
+    
+    public void showNewQuestion() {
+        feedbackScreen = false;
+        currentQuestion = nextQuestion;
+        
+        questionText = currentQuestion.getQuestionText();
+        questionTextDisplay.setText(questionText);
+        
+        answers = currentQuestion.getShuffledAnswers();
+        
+        System.out.println(answers);
+        System.out.println(answerButtons);
+        
+        for (int i = 0; i < 4; i++) {
+            answerButtons.get(i).setText(answers.get(i));
+        }
+    }
+    
+    public void showFeedbackScreen(String answer) {
+        questionsAsked++;
+        
+        String feedbackString;
+        if (answer.equals(currentQuestion.getCorrectAnswer())) {
+            questionsCorrect++;
+            feedbackString = "You got it!";
+        } else {
+            feedbackString = "Nope, the correct answer was " + currentQuestion.getCorrectAnswer();
+        }
     }
 }
