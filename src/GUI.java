@@ -59,8 +59,7 @@ public class GUI {
             } catch (IOException ex) {
                 throw new RuntimeException(ex);
             }
-    
-    
+
             JFrame createArea = new JFrame("TRIVIA BOT - CREATE");
             createArea.setDefaultCloseOperation(createArea.DISPOSE_ON_CLOSE);
 
@@ -236,7 +235,7 @@ public class GUI {
             JTextField playersInput = new JTextField(20);
 
             JButton GamePlay = new JButton("Lets Play");
-            GamePlay.addActionListener(new continuedplayButtonListener());
+            GamePlay.addActionListener(new letsPlayButtonListener());
 
 
             playerNames.getContentPane().add(namesOfPlayers);
@@ -257,6 +256,35 @@ public class GUI {
         }
     }
 
+    static class letsPlayButtonListener implements ActionListener{
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            JFrame getReady = new JFrame("Quick Play");
+
+            JLabel introText = new JLabel("Player 1 - Are You Ready?");
+
+            JButton yesPlay = new JButton("Yes, Let's Play!");
+            JButton noPlay = new JButton("No, take me back!");
+
+            getReady.getContentPane().add(introText);
+            getReady.getContentPane().add(yesPlay);
+            getReady.getContentPane().add(noPlay);
+
+            introText.setVisible(true);
+            yesPlay.setVisible(true);
+            noPlay.setVisible(true);
+
+            getReady.pack();
+            getReady.setMinimumSize(getReady.getSize());
+            getReady.setSize(300, 200);
+            getReady.setVisible(true);
+        }
+    }
+    
+    
+    
+    
     // opens main menu
     public static void main(String[] args) {
         //frame code
@@ -264,16 +292,9 @@ public class GUI {
         
         MainMenu.setDefaultCloseOperation(MainMenu.EXIT_ON_CLOSE);
 
+
         //box layout
         MainMenu.setLayout(new GridBagLayout());
-
-
-        //Add Image
-        JLabel triviaImage = new JLabel();
-        triviaImage.setIcon(new ImageIcon("trivia.jpg"));
-        Dimension size = triviaImage.getPreferredSize();
-        triviaImage.setBounds(1000,1000,size.width, size.height);
-        MainMenu.add(triviaImage, new GridBagConstraints());
 
         //Title Text
         JLabel TitleText = new JLabel("Welcome to TriviaBot!");
@@ -296,7 +317,7 @@ public class GUI {
         quickplayButton.addActionListener(new quickButtonListener());
         MainMenu.add(quickplayButton, new GridBagConstraints());
     
-        
+
         MainMenu.pack();
         MainMenu.setMinimumSize(MainMenu.getSize());
         MainMenu.setSize(300, 200);
