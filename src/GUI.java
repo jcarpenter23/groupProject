@@ -53,8 +53,7 @@ public class GUI {
             } catch (IOException ex) {
                 throw new RuntimeException(ex);
             }
-    
-    
+
             JFrame createArea = new JFrame("TRIVIA BOT - CREATE");
             createArea.setDefaultCloseOperation(createArea.DISPOSE_ON_CLOSE);
 
