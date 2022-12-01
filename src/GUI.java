@@ -20,12 +20,26 @@ public class GUI {
             
             JFrame playArea = new JFrame("TRIVIA BOT - PLAY");
             playArea.setDefaultCloseOperation(playArea.DISPOSE_ON_CLOSE);
+            
+            
 
             JFileChooser fileChooser = new JFileChooser(SETS_DIRECTORY);
             fileChooser.showOpenDialog(playArea);
             
             File toOpen = fileChooser.getSelectedFile();
             
+            QuestionSet questionSet;
+            
+            try {
+                questionSet = new QuestionSet(toOpen.getPath());
+            } catch (IOException ex) {
+                ex.printStackTrace();
+                return;
+            }
+            
+            GameGui gameGui = new GameGui(questionSet);
+            
+            /*
             JLabel testText = new JLabel(toOpen.getName());
             playArea.getContentPane().add(testText);
     
@@ -33,6 +47,8 @@ public class GUI {
             playArea.setMinimumSize(playArea.getSize());
             playArea.setSize(300, 200);
             playArea.setVisible(true);
+            
+             */
         }
     }
 

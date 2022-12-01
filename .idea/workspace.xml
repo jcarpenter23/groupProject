@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="586378f7-bb8b-4aa3-86c5-d3fc75f6db1c" name="Changes" comment="added validateCorrectAnswer">
-      <change beforePath="$PROJECT_DIR$/src/Question.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Question.java" afterDir="false" />
+    <list default="true" id="586378f7-bb8b-4aa3-86c5-d3fc75f6db1c" name="Changes" comment="trying to create a question with blank text now throws an exception (would break .set files otherwise)">
+      <change afterPath="$PROJECT_DIR$/src/GameGui.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +44,7 @@
       <recent name="C:\Users\liamn\OneDrive\Documents\GitHub\groupProject" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.QuestionsTest">
+  <component name="RunManager" selected="Application.GUI.java">
     <configuration name="FixSet" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="FixSet" />
       <module name="groupProject" />
@@ -171,7 +173,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669905895459</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="trying to create a question with blank text now throws an exception (would break .set files otherwise)">
+      <created>1669906280540</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1669906280540</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -210,6 +219,7 @@
     <MESSAGE value="quickplay" />
     <MESSAGE value="commented everything" />
     <MESSAGE value="added validateCorrectAnswer" />
-    <option name="LAST_COMMIT_MESSAGE" value="added validateCorrectAnswer" />
+    <MESSAGE value="trying to create a question with blank text now throws an exception (would break .set files otherwise)" />
+    <option name="LAST_COMMIT_MESSAGE" value="trying to create a question with blank text now throws an exception (would break .set files otherwise)" />
   </component>
 </project>
