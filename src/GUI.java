@@ -5,15 +5,23 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class GUI {
+    
+    private static final String SETS_DIRECTORY = "sets";
 
     static class playButtonListener implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
+            
             JFrame playArea = new JFrame("TRIVIA BOT - PLAY");
             playArea.setDefaultCloseOperation(playArea.DISPOSE_ON_CLOSE);
             playArea.setSize(10000, 10000);
             playArea.pack();
             playArea.setVisible(true);
+            
+            JFileChooser fileChooser = new JFileChooser(SETS_DIRECTORY);
+            fileChooser.showOpenDialog(playArea);
+            
+            
         }
     }
 
