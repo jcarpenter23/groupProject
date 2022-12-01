@@ -113,6 +113,13 @@ public class QuestionSet {
         questions.add(new Question(text, answers, category));
     }
     
+    public void forceCreateQuestion(Question question) {
+        if (!categories.contains(question.getCategory())) {
+            createCategory(question.getCategory());
+        }
+        questions.add(question);
+    }
+    
     public void sortByCategory() {
         Collections.sort(questions);
     }
