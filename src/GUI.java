@@ -124,9 +124,18 @@ public class GUI {
         public static QuestionSet getCustomSet() {
             return customSet;
         }
+        
+        public static void saveCustomSet() {
+            try {
+                customSet.save();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
     }
     
     static class AddQuestionButtonListener implements ActionListener {
+        /*
         private final JTextField categoryBox;
         private final JTextField questionsBox;
         private final JTextField correctanswersBox;
@@ -134,32 +143,41 @@ public class GUI {
         private final JTextField wronganswersBox2;
         private final JTextField wronganswersBox3;
         
+         */
+        private final ArrayList<JTextField> textFields;
+        
         
         public AddQuestionButtonListener(JTextField categoryBox, JTextField questionsBox, JTextField correctanswersBox, JTextField wronganswersBox1, JTextField wronganswersBox2, JTextField wronganswersBox3) {
-            this.questionsBox = questionsBox;
-            this.categoryBox = categoryBox;
-            this.correctanswersBox = correctanswersBox;
-            this.wronganswersBox1 = wronganswersBox1;
-            this.wronganswersBox2 = wronganswersBox2;
-            this.wronganswersBox3 = wronganswersBox3;
+            textFields = new ArrayList<>() {
+                {
+                    add(categoryBox);
+                    add(questionsBox);
+                    add(correctanswersBox);
+                    add(wronganswersBox1);
+                    add(wronganswersBox2);
+                    add(wronganswersBox3);
+                }
+            };
         }
         @Override
         public void actionPerformed(ActionEvent e) {
-            String category = categoryBox.getText();
-            String questionText = questionsBox.getText();
+            String category = textFields.get(0).getText();
+            String questionText = textFields.get(1).getText();
             
-            ArrayList<String> answers = new ArrayList<String>() {
+            ArrayList<String> answers = new ArrayList<>() {
                 {
-                    add(correctanswersBox.getText());
-                    add(wronganswersBox1.getText());
-                    add(wronganswersBox2.getText());
-                    add(wronganswersBox3.getText());
+                    for (int i = 2; i < 6; i++) {
+                        add(textFields.get(i).getText());
+                    }
                 }
             };
+    
+            for (JTextField textField : textFields) {
+                textField.setText("");
+            }
             
             createButtonListener.addToCustomSet(new Question(questionText, answers, category));
-            
-            System.out.println(createButtonListener.getCustomSet());
+            createButtonListener.saveCustomSet();
         }
     }
 
