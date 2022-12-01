@@ -6,7 +6,6 @@ import java.awt.event.ActionListener;
 
 public class GUI {
 
-
     static class playButtonListener implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
@@ -15,8 +14,6 @@ public class GUI {
             playArea.setSize(10000, 10000);
             playArea.pack();
             playArea.setVisible(true);
-
-
         }
     }
 
@@ -33,17 +30,13 @@ public class GUI {
     }
 
 
-
-
-
     public static void main(String[] args) {
-
         //frame code
         JFrame MainMenu = new JFrame("TriviaBot");
-        MainMenu.setDefaultCloseOperation(MainMenu.EXIT_ON_CLOSE);
         MainMenu.setSize(10000,10000);
         MainMenu.pack();
         MainMenu.setVisible(true);
+        MainMenu.setDefaultCloseOperation(MainMenu.EXIT_ON_CLOSE);
 
         //Add Image
         JLabel triviaImage = new JLabel();
@@ -63,13 +56,14 @@ public class GUI {
         playButton.addActionListener(new playButtonListener());
         MainMenu.add(playButton, new GridBagConstraints());
 
+
         //Create Button
         JButton createButton = new JButton("CREATE");
         createButton.addActionListener(new createButtonListener());
         MainMenu.add(createButton, new GridBagConstraints());
-
         }
-    }
 
+
+ }
 
 
