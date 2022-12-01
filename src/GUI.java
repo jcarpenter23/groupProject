@@ -247,22 +247,17 @@ public class GUI {
     }
 
 
+
+
     public static void main(String[] args) {
         //frame code
         JFrame MainMenu = new JFrame("TriviaBot");
         
         MainMenu.setDefaultCloseOperation(MainMenu.EXIT_ON_CLOSE);
 
+
         //box layout
         MainMenu.setLayout(new GridBagLayout());
-
-
-        //Add Image
-        JLabel triviaImage = new JLabel();
-        triviaImage.setIcon(new ImageIcon("trivia.jpg"));
-        Dimension size = triviaImage.getPreferredSize();
-        triviaImage.setBounds(1000,1000,size.width, size.height);
-        MainMenu.add(triviaImage, new GridBagConstraints());
 
         //Title Text
         JLabel TitleText = new JLabel("Welcome to TriviaBot!");
@@ -285,7 +280,7 @@ public class GUI {
         quickplayButton.addActionListener(new quickButtonListener());
         MainMenu.add(quickplayButton, new GridBagConstraints());
     
-        
+
         MainMenu.pack();
         MainMenu.setMinimumSize(MainMenu.getSize());
         MainMenu.setSize(300, 200);
