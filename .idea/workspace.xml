@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="586378f7-bb8b-4aa3-86c5-d3fc75f6db1c" name="Changes" comment="changed main menu button names and order">
+    <list default="true" id="586378f7-bb8b-4aa3-86c5-d3fc75f6db1c" name="Changes" comment="closing multiplayer frame on command">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI.java" afterDir="false" />
     </list>
@@ -224,7 +224,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669913385133</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="closing multiplayer frame on command">
+      <created>1669914057421</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1669914057421</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -271,6 +278,7 @@
     <MESSAGE value="deleted test classes" />
     <MESSAGE value="player name entry now in scroll pane to prevent ui jank" />
     <MESSAGE value="changed main menu button names and order" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed main menu button names and order" />
+    <MESSAGE value="closing multiplayer frame on command" />
+    <option name="LAST_COMMIT_MESSAGE" value="closing multiplayer frame on command" />
   </component>
 </project>
