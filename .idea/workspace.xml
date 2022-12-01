@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="586378f7-bb8b-4aa3-86c5-d3fc75f6db1c" name="Changes" comment="class, variable, and method names are now style compliant">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    <list default="true" id="586378f7-bb8b-4aa3-86c5-d3fc75f6db1c" name="Changes" comment="closing multiplayer frame on command">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -223,12 +224,12 @@
       <option name="project" value="LOCAL" />
       <updated>1669913385133</updated>
     </task>
-    <task id="LOCAL-00021" summary="class, variable, and method names are now style compliant">
-      <created>1669913835946</created>
+    <task id="LOCAL-00021" summary="closing multiplayer frame on command">
+      <created>1669914057421</created>
       <option name="number" value="00021" />
       <option name="presentableId" value="LOCAL-00021" />
       <option name="project" value="LOCAL" />
-      <updated>1669913835946</updated>
+      <updated>1669914057421</updated>
     </task>
     <option name="localTasksCounter" value="22" />
     <servers />
@@ -254,6 +255,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="delete idea" />
@@ -276,7 +278,7 @@
     <MESSAGE value="deleted test classes" />
     <MESSAGE value="player name entry now in scroll pane to prevent ui jank" />
     <MESSAGE value="changed main menu button names and order" />
-    <MESSAGE value="class, variable, and method names are now style compliant" />
-    <option name="LAST_COMMIT_MESSAGE" value="class, variable, and method names are now style compliant" />
+    <MESSAGE value="closing multiplayer frame on command" />
+    <option name="LAST_COMMIT_MESSAGE" value="closing multiplayer frame on command" />
   </component>
 </project>

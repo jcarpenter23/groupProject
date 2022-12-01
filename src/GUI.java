@@ -18,10 +18,8 @@ public class GUI {
         @Override
         public void actionPerformed(ActionEvent e) {
             
-            JFrame playArea = new JFrame("TRIVIA BOT - PLAY");
+            JFrame playArea = new JFrame("QUIZ TIME - PLAY");
             playArea.setDefaultCloseOperation(playArea.DISPOSE_ON_CLOSE);
-            
-            
 
             JFileChooser fileChooser = new JFileChooser(SETS_DIRECTORY);
             fileChooser.showOpenDialog(playArea);
@@ -76,7 +74,7 @@ public class GUI {
                 throw new RuntimeException(ex);
             }
 
-            JFrame createArea = new JFrame("TRIVIA BOT - CREATE");
+            JFrame createArea = new JFrame("QUIZ TIME - CREATE");
             createArea.setDefaultCloseOperation(createArea.DISPOSE_ON_CLOSE);
 
             createArea.getContentPane().setLayout(new BoxLayout(createArea.getContentPane(), BoxLayout.Y_AXIS));
@@ -288,6 +286,11 @@ public class GUI {
             JButton yesPlay = new JButton("Yes, Let's Play!");
             JButton noPlay = new JButton("No, take me back!");
 
+            //close frame when no button pushed
+            noPlay.addActionListener(event->{
+                getReady.dispose();
+            });
+
             getReady.getContentPane().add(introText);
             getReady.getContentPane().add(yesPlay);
             getReady.getContentPane().add(noPlay);
@@ -302,6 +305,7 @@ public class GUI {
             getReady.setVisible(true);
         }
     }
+
 
 
     // opens main menu
@@ -330,7 +334,7 @@ public class GUI {
         MainMenu.setLayout(new GridBagLayout());
 
         //Title Text
-        JLabel TitleText = new JLabel("Welcome to TriviaBot!");
+        JLabel TitleText = new JLabel("Welcome to QUIZ TIME!");
         TitleText.setVisible(true);
         MainMenu.getContentPane().add(TitleText);
 
