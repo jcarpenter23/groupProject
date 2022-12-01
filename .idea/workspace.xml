@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="586378f7-bb8b-4aa3-86c5-d3fc75f6db1c" name="Changes" comment="expanded functionality of GameGui">
-      <change beforePath="$PROJECT_DIR$/src/GameGui.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameGui.java" afterDir="false" />
+    <list default="true" id="586378f7-bb8b-4aa3-86c5-d3fc75f6db1c" name="Changes" comment="fixed play button continued functionality">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,6 +33,9 @@
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -192,7 +196,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669910350583</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="fixed play button continued functionality">
+      <created>1669911115817</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1669911115817</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -216,6 +227,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="delete idea" />
@@ -234,6 +246,7 @@
     <MESSAGE value="trying to create a question with blank text now throws an exception (would break .set files otherwise)" />
     <MESSAGE value="added GameGui" />
     <MESSAGE value="expanded functionality of GameGui" />
-    <option name="LAST_COMMIT_MESSAGE" value="expanded functionality of GameGui" />
+    <MESSAGE value="fixed play button continued functionality" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed play button continued functionality" />
   </component>
 </project>

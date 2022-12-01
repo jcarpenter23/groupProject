@@ -302,11 +302,23 @@ public class GUI {
     }
 
 
-    
-
     // opens main menu
     public static void main(String[] args) {
+
+        //look and feel of system
+        UIManager.LookAndFeelInfo[] options = UIManager.getInstalledLookAndFeels();
+        for (UIManager.LookAndFeelInfo option : options) {
+            System.out.println(option.getClassName());
+        }
+
+        try {
+            UIManager.setLookAndFeel("javax.swing.plaf.metal.MetalLookAndFeel");
+        } catch(Exception e) {
+            System.out.println("Could not set the look and feel.");
+        }
+
         //frame code
+
         JFrame MainMenu = new JFrame("TriviaBot");
         
         MainMenu.setDefaultCloseOperation(MainMenu.EXIT_ON_CLOSE);
