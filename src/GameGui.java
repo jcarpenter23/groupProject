@@ -4,23 +4,24 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
+// gui for single player game. asks question, then gives feedback
 public class GameGui {
-    QuestionSet questionSet;
+    private final QuestionSet questionSet;
     
-    JFrame playArea;
-    JLabel questionTextDisplay;
-    ArrayList<JButton> answerButtons;
+    private final JLabel questionTextDisplay;
+    private final ArrayList<JButton> answerButtons;
     
-    Question currentQuestion;
-    String questionText;
-    ArrayList<String> answers;
-    Question nextQuestion;
+    private Question currentQuestion;
+    private String questionText;
+    private ArrayList<String> answers;
+    private Question nextQuestion;
     
-    int questionsCorrect;
-    int questionsAsked;
+    private int questionsCorrect;
+    private int questionsAsked;
     
-    boolean feedbackScreen;
+    private boolean feedbackScreen;
     
+    // creates the window in which the single player game will be played, then begins the game
     public GameGui(QuestionSet questionSet) {
         this.questionSet = questionSet;
         questionText = "";
@@ -32,8 +33,8 @@ public class GameGui {
                 add("");
             }
         };
-        
-        playArea = new JFrame("TRIVIA BOT - PLAY");
+    
+        JFrame playArea = new JFrame("TRIVIA BOT - PLAY");
         playArea.setDefaultCloseOperation(playArea.DISPOSE_ON_CLOSE);
         playArea.getContentPane().setLayout(new GridLayout(5, 1));
         
@@ -60,6 +61,7 @@ public class GameGui {
         showNewQuestion();
     }
     
+    // listener for button in single player gui
     static class AnswerButtonEventListener implements ActionListener {
     
         JButton button;
@@ -80,10 +82,12 @@ public class GameGui {
         }
     }
     
+    // true if the game is on the question feedback screen
     public boolean onFeedbackScreen() {
         return feedbackScreen;
     }
     
+    // asks the user the question stored in nextQuestion
     public void showNewQuestion() {
         feedbackScreen = false;
         currentQuestion = nextQuestion;
@@ -98,6 +102,8 @@ public class GameGui {
         }
     }
     
+    // shows whether the user got the question right, their score so far, and the next category
+    // pressing any answer button on this screen begins the next question
     public void showFeedbackScreen(String answer) {
         feedbackScreen = true;
         questionsAsked++;

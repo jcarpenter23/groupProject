@@ -5,7 +5,7 @@ public class QuestionsTest {
     public static void main(String[] args) {
         QuestionSet testSet;
         try {
-            testSet = new QuestionSet("sets/test.set");
+            testSet = new QuestionSet("sets/setFileFormatExample.set");
         } catch (FileNotFoundException e) {
             System.out.println("where did the file go");
             return;

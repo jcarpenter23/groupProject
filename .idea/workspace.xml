@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="586378f7-bb8b-4aa3-86c5-d3fc75f6db1c" name="Changes" comment="expanded functionality of GameGui">
+    <list default="true" id="586378f7-bb8b-4aa3-86c5-d3fc75f6db1c" name="Changes" comment="GameGui (&quot;play&quot; mode) now fully functional">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sets/test.set" beforeDir="false" afterPath="$PROJECT_DIR$/sets/setFileFormatExample.set" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GameGui.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameGui.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/QuestionsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/QuestionsTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -192,7 +195,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669910350583</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="GameGui (&quot;play&quot; mode) now fully functional">
+      <created>1669911074889</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1669911074889</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -234,6 +244,7 @@
     <MESSAGE value="trying to create a question with blank text now throws an exception (would break .set files otherwise)" />
     <MESSAGE value="added GameGui" />
     <MESSAGE value="expanded functionality of GameGui" />
-    <option name="LAST_COMMIT_MESSAGE" value="expanded functionality of GameGui" />
+    <MESSAGE value="GameGui (&quot;play&quot; mode) now fully functional" />
+    <option name="LAST_COMMIT_MESSAGE" value="GameGui (&quot;play&quot; mode) now fully functional" />
   </component>
 </project>
