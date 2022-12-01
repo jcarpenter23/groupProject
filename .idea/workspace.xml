@@ -4,11 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="586378f7-bb8b-4aa3-86c5-d3fc75f6db1c" name="Changes" comment="questions made using create gui are now instantly saved to file">
-      <change afterPath="$PROJECT_DIR$/sets/defaultSet.set" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FixSet.java" afterDir="false" />
+    <list default="true" id="586378f7-bb8b-4aa3-86c5-d3fc75f6db1c" name="Changes" comment="fixed formatting on default question set, categories are now properly loaded from file">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/QuestionsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/QuestionsTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Question.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Question.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/QuestionSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/QuestionSet.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +42,8 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/liamn/OneDrive/Documents/GitHub/groupProject/sets"
+    "last_opened_file_path": "C:/Users/liamn/OneDrive/Documents/GitHub/groupProject/sets",
+    "run.code.analysis.last.selected.profile": "pProject Default"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -52,7 +55,7 @@
       <recent name="C:\Users\liamn\OneDrive\Documents\GitHub\groupProject" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.QuestionsTest">
+  <component name="RunManager" selected="Application.GUI.java">
     <configuration name="FixSet" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="FixSet" />
       <module name="groupProject" />
@@ -160,7 +163,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669864257325</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="fixed formatting on default question set, categories are now properly loaded from file">
+      <created>1669865585564</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1669865585564</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -196,6 +206,7 @@
     <MESSAGE value="add button on create screen now accommodates new layout" />
     <MESSAGE value="fixed saving" />
     <MESSAGE value="questions made using create gui are now instantly saved to file" />
-    <option name="LAST_COMMIT_MESSAGE" value="questions made using create gui are now instantly saved to file" />
+    <MESSAGE value="fixed formatting on default question set, categories are now properly loaded from file" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed formatting on default question set, categories are now properly loaded from file" />
   </component>
 </project>

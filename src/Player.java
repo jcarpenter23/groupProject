@@ -7,7 +7,7 @@ public class Player {
     private int score;
     private int answer;
 
-
+    // creates a player
     public Player(String name, int score, int answer){
         this.name = name;
         this.score = 0;

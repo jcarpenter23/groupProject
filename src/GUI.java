@@ -1,4 +1,3 @@
-import com.sun.tools.javac.Main;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -7,12 +6,15 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 
+// handles the program's gui
 public class GUI {
     
     private static final String SETS_DIRECTORY = "sets";
     private static final String CUSTOM_SET_FILE = SETS_DIRECTORY + "/custom.set";
 
+    // action listener for "play" button on main menu
     static class playButtonListener implements ActionListener {
+        // begins standard game
         @Override
         public void actionPerformed(ActionEvent e) {
             
@@ -34,9 +36,13 @@ public class GUI {
         }
     }
 
+    // action listener for "create" button on main menu
     static class createButtonListener implements ActionListener {
         
         private static QuestionSet customSet = new QuestionSet(new ArrayList<>());
+        
+        // opens question set creation gui. questions created are saved to sets/custom.set
+        // if sets/custom.set doesn't exist, it is created when "create" is clicked
         @Override
         public void actionPerformed(ActionEvent e) {
             
@@ -115,14 +121,17 @@ public class GUI {
             createArea.setVisible(true);
         }
         
+        // adds a question to customSet
         public static void addToCustomSet(Question question) {
             customSet.forceCreateQuestion(question);
         }
         
+        // returns customSet
         public static QuestionSet getCustomSet() {
             return customSet;
         }
         
+        // saves the contents of customSet to sets/custom.set
         public static void saveCustomSet() {
             try {
                 customSet.save();
@@ -132,19 +141,12 @@ public class GUI {
         }
     }
     
+    // action listener for "add" button in create menu
     static class AddQuestionButtonListener implements ActionListener {
-        /*
-        private final JTextField categoryBox;
-        private final JTextField questionsBox;
-        private final JTextField correctanswersBox;
-        private final JTextField wronganswersBox1;
-        private final JTextField wronganswersBox2;
-        private final JTextField wronganswersBox3;
         
-         */
         private final ArrayList<JTextField> textFields;
         
-        
+        // creates a new action listener with access to 6 text fields (one per question string)
         public AddQuestionButtonListener(JTextField categoryBox, JTextField questionsBox, JTextField correctanswersBox, JTextField wronganswersBox1, JTextField wronganswersBox2, JTextField wronganswersBox3) {
             textFields = new ArrayList<>() {
                 {
@@ -157,6 +159,10 @@ public class GUI {
                 }
             };
         }
+        
+        // creates a Question object from the contents of the text fields, adds it to customSet, and saves it to sets/custom.set
+        // if category field is blank when "add" is clicked, an IllegalArgumentException is printed to System.err and the question is not added
+        // text field contents are cleared upon clicking "add" (even if adding/saving question fails!)
         @Override
         public void actionPerformed(ActionEvent e) {
             String category = textFields.get(0).getText();
@@ -179,8 +185,10 @@ public class GUI {
         }
     }
 
+    // action listener for "quick play" button on main menu
     static class quickButtonListener implements ActionListener{
 
+        // begins quick play game
         @Override
         public void actionPerformed(ActionEvent e) {
 
@@ -212,8 +220,11 @@ public class GUI {
 
         }
     }
+    
+    // action listener for "continue button" on quick play menu
     static class continuedplayButtonListener implements ActionListener{
 
+        // opens player name entry
         @Override
         public void actionPerformed(ActionEvent e) {
 
@@ -246,7 +257,7 @@ public class GUI {
         }
     }
 
-
+    // opens main menu
     public static void main(String[] args) {
         //frame code
         JFrame MainMenu = new JFrame("TriviaBot");
