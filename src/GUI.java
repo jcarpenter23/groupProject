@@ -38,17 +38,24 @@ public class GUI {
         public void actionPerformed(ActionEvent e) {
             JFrame createArea = new JFrame("TRIVIA BOT - CREATE");
             createArea.setDefaultCloseOperation(createArea.DISPOSE_ON_CLOSE);
-            createArea.setSize(10000, 10000);
-            //display frame
-            createArea.pack();
-            createArea.setVisible(true);
 
-            //text boxes for Questions input
-            JTextField questionsBox = new JTextField(200);
-            JTextField answersBox = new JTextField(200);
+            createArea.getContentPane().setLayout(new BoxLayout(createArea.getContentPane(), BoxLayout.Y_AXIS));
+
+
+            //text boxes and labels for Questions input
+            JTextField questionsBox = new JTextField(10);
+            JTextField answersBox = new JTextField(10);
+            JLabel questionInstructions = new JLabel("Enter a trivia question to add:");
+            JLabel answerInstructions = new JLabel("Enter the answer to the question:");
+
+            createArea.getContentPane().add(questionInstructions);
             createArea.getContentPane().add(questionsBox);
+            createArea.getContentPane().add(answerInstructions);
             createArea.getContentPane().add(answersBox);
+
+            questionInstructions.setVisible(true);
             questionsBox.setVisible(true);
+            answerInstructions.setVisible(true);
             answersBox.setVisible(true);
 
             //button for text boxes
@@ -56,6 +63,10 @@ public class GUI {
             createArea.getContentPane().add(addQuestion);
 
 
+            createArea.pack();
+            createArea.setMinimumSize(createArea.getSize());
+            createArea.setSize(300, 200);
+            createArea.setVisible(true);
         }
     }
 
