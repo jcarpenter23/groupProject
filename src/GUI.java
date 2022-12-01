@@ -248,7 +248,7 @@ public class GUI {
             playerNames.getContentPane().setLayout(new BoxLayout(playerNames.getContentPane(), BoxLayout.Y_AXIS));
 
             JLabel namesOfPlayers = new JLabel("Enter player names:");
-            JTextField playersInput = new JTextField(20);
+            JTextArea playersInput = new JTextArea();
 
             JButton GamePlay = new JButton("Lets Play");
             GamePlay.addActionListener(new letsPlayButtonListener());
@@ -272,11 +272,14 @@ public class GUI {
         }
     }
 
+    //action listener for when the user decides to continue with quick play - asks if they are ready to begin
     static class letsPlayButtonListener implements ActionListener{
 
         @Override
         public void actionPerformed(ActionEvent e) {
             JFrame getReady = new JFrame("Quick Play");
+            getReady.setDefaultCloseOperation(getReady.DISPOSE_ON_CLOSE);
+            getReady.getContentPane().setLayout(new BoxLayout(getReady.getContentPane(), BoxLayout.Y_AXIS));
 
             JLabel introText = new JLabel("Player 1 - Are You Ready?");
 
@@ -297,13 +300,25 @@ public class GUI {
             getReady.setVisible(true);
         }
     }
-    
-    
-    
-    
+
+
     // opens main menu
     public static void main(String[] args) {
+
+        //look and feel of system
+        UIManager.LookAndFeelInfo[] options = UIManager.getInstalledLookAndFeels();
+        for (UIManager.LookAndFeelInfo option : options) {
+            System.out.println(option.getClassName());
+        }
+
+        try {
+            UIManager.setLookAndFeel("javax.swing.plaf.metal.MetalLookAndFeel");
+        } catch(Exception e) {
+            System.out.println("Could not set the look and feel.");
+        }
+
         //frame code
+
         JFrame MainMenu = new JFrame("TriviaBot");
         
         MainMenu.setDefaultCloseOperation(MainMenu.EXIT_ON_CLOSE);
