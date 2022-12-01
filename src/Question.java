@@ -8,14 +8,19 @@ public class Question implements Comparable<Question> {
     private final String category;
     
     // creates a new question. the correct answer should be at index 0 in answers
+    // throws IllegalArgumentException if question text is blank
     public Question(String questionText, ArrayList<String> answers, String category) {
+        if (questionText.isBlank()) {
+            throw new IllegalArgumentException("Blank questions are not allowed");
+        }
+        
         this.questionText = questionText;
         this.category = category;
         
-        if (answers.size() > 4) {
+        while (answers.size() > 4) {
             answers.remove(4);
         }
-        if (answers.size() < 4) {
+        while (answers.size() < 4) {
             answers.add("");
         }
         this.answers = answers;
