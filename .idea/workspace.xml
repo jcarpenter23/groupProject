@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="586378f7-bb8b-4aa3-86c5-d3fc75f6db1c" name="Changes" comment="questions made using create gui are now instantly saved to file">
-      <change afterPath="$PROJECT_DIR$/sets/defaultSet.set" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FixSet.java" afterDir="false" />
+    <list default="true" id="586378f7-bb8b-4aa3-86c5-d3fc75f6db1c" name="Changes" comment="quickplay">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/QuestionsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/QuestionsTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,13 +34,6 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/liamn/OneDrive/Documents/GitHub/groupProject/sets"
-  }
-}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\liamn\OneDrive\Documents\GitHub\groupProject\sets" />
@@ -160,7 +151,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669864257325</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="quickplay">
+      <created>1669865907295</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1669865907295</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -184,6 +182,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="delete idea" />
@@ -196,6 +195,7 @@
     <MESSAGE value="add button on create screen now accommodates new layout" />
     <MESSAGE value="fixed saving" />
     <MESSAGE value="questions made using create gui are now instantly saved to file" />
-    <option name="LAST_COMMIT_MESSAGE" value="questions made using create gui are now instantly saved to file" />
+    <MESSAGE value="quickplay" />
+    <option name="LAST_COMMIT_MESSAGE" value="quickplay" />
   </component>
 </project>

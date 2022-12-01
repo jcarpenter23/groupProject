@@ -224,7 +224,7 @@ public class GUI {
             JTextField playersInput = new JTextField(20);
 
             JButton GamePlay = new JButton("Lets Play");
-            GamePlay.addActionListener(new continuedplayButtonListener());
+            GamePlay.addActionListener(new letsPlayButtonListener());
 
 
             playerNames.getContentPane().add(namesOfPlayers);
@@ -242,6 +242,32 @@ public class GUI {
             playerNames.setSize(300, 200);
             playerNames.setVisible(true);
 
+        }
+    }
+
+    static class letsPlayButtonListener implements ActionListener{
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            JFrame getReady = new JFrame("Quick Play");
+
+            JLabel introText = new JLabel("Player 1 - Are You Ready?");
+
+            JButton yesPlay = new JButton("Yes, Let's Play!");
+            JButton noPlay = new JButton("No, take me back!");
+
+            getReady.getContentPane().add(introText);
+            getReady.getContentPane().add(yesPlay);
+            getReady.getContentPane().add(noPlay);
+
+            introText.setVisible(true);
+            yesPlay.setVisible(true);
+            noPlay.setVisible(true);
+
+            getReady.pack();
+            getReady.setMinimumSize(getReady.getSize());
+            getReady.setSize(300, 200);
+            getReady.setVisible(true);
         }
     }
 
