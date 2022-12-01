@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="586378f7-bb8b-4aa3-86c5-d3fc75f6db1c" name="Changes" comment="player names">
+    <list default="true" id="586378f7-bb8b-4aa3-86c5-d3fc75f6db1c" name="Changes" comment="questions made using create gui are now instantly saved to file">
+      <change afterPath="$PROJECT_DIR$/sets/defaultSet.set" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/FixSet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/QuestionsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/QuestionsTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,15 +36,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/liamn/OneDrive/Documents/GitHub/groupProject/sets"
+  }
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\liamn\OneDrive\Documents\GitHub\groupProject\sets" />
       <recent name="$PROJECT_DIR$/src" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\liamn\OneDrive\Documents\GitHub\groupProject" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.QuestionsTest">
+    <configuration name="FixSet" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="FixSet" />
+      <module name="groupProject" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="GUI.java" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="GUI" />
       <module name="groupProject" />
@@ -50,6 +67,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="QuestionsTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="QuestionsTest" />
+      <module name="groupProject" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.QuestionsTest" />
+        <item itemvalue="Application.FixSet" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -123,15 +153,26 @@
       <option name="project" value="LOCAL" />
       <updated>1669862936550</updated>
     </task>
-    <task id="LOCAL-00010" summary="player names">
-      <created>1669864746219</created>
+    <task id="LOCAL-00010" summary="questions made using create gui are now instantly saved to file">
+      <created>1669864257325</created>
       <option name="number" value="00010" />
       <option name="presentableId" value="LOCAL-00010" />
       <option name="project" value="LOCAL" />
-      <updated>1669864746219</updated>
+      <updated>1669864257325</updated>
     </task>
     <option name="localTasksCounter" value="11" />
     <servers />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+        <option value="Space.CommitStatus" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -143,7 +184,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="delete idea" />
@@ -155,7 +195,7 @@
     <MESSAGE value="add button on create screen works" />
     <MESSAGE value="add button on create screen now accommodates new layout" />
     <MESSAGE value="fixed saving" />
-    <MESSAGE value="player names" />
-    <option name="LAST_COMMIT_MESSAGE" value="player names" />
+    <MESSAGE value="questions made using create gui are now instantly saved to file" />
+    <option name="LAST_COMMIT_MESSAGE" value="questions made using create gui are now instantly saved to file" />
   </component>
 </project>

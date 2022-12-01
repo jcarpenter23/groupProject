@@ -13,7 +13,7 @@ public class QuestionsTest {
             System.out.println("something broke");
             return;
         }
-        
+        /*
         System.out.println(testSet);
 
         
@@ -39,5 +39,8 @@ public class QuestionsTest {
         } catch (IOException e) {
             e.printStackTrace();
         }
+        
+         */
+        System.out.println(testSet.getCategories());
     }
 }

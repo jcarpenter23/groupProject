@@ -38,6 +38,8 @@ public class QuestionSet {
                 break; // end of file
             }
             
+            categories.add(currentCategory);
+            
             while (true) {
                 try {
                     currentQuestion = br.readLine();
