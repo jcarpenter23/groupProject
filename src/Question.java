@@ -52,6 +52,8 @@ public class Question implements Comparable<Question> {
         Collections.shuffle(output);
         return output;
     }
+
+    //public void ask() {
     
     public String toString() {
         StringBuilder answersString = new StringBuilder();
@@ -60,6 +62,7 @@ public class Question implements Comparable<Question> {
         }
         return String.format("%s: %s%s", category, questionText, answersString);
     }
+
     
     @Override
     public int compareTo(Question o) {

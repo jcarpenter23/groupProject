@@ -1,4 +1,6 @@
- /*
+import java.util.Scanner;
+
+/*
   *This class assigns player objects their chosen answer, score and name
   *Keeps track of each player's score to determine winner of that category
   */
@@ -26,5 +28,6 @@ public class Player {
     public int incrementScore() {
         return score++;
     }
+
 
 }

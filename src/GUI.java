@@ -25,7 +25,6 @@ public class GUI {
             createArea.setSize(10000, 10000);
             createArea.pack();
             createArea.setVisible(true);
-
         }
     }
 
@@ -63,7 +62,9 @@ public class GUI {
         MainMenu.add(createButton, new GridBagConstraints());
         }
 
+        }
 
- }
+
+
 
 
