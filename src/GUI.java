@@ -20,8 +20,6 @@ public class GUI {
             
             JFrame playArea = new JFrame("TRIVIA BOT - PLAY");
             playArea.setDefaultCloseOperation(playArea.DISPOSE_ON_CLOSE);
-            
-            
 
             JFileChooser fileChooser = new JFileChooser(SETS_DIRECTORY);
             fileChooser.showOpenDialog(playArea);
@@ -288,6 +286,11 @@ public class GUI {
             JButton yesPlay = new JButton("Yes, Let's Play!");
             JButton noPlay = new JButton("No, take me back!");
 
+            //close frame when no button pushed
+            noPlay.addActionListener(event->{
+                getReady.dispose();
+            });
+
             getReady.getContentPane().add(introText);
             getReady.getContentPane().add(yesPlay);
             getReady.getContentPane().add(noPlay);
@@ -302,6 +305,7 @@ public class GUI {
             getReady.setVisible(true);
         }
     }
+
 
 
     // opens main menu
