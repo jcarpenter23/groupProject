@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="586378f7-bb8b-4aa3-86c5-d3fc75f6db1c" name="Changes" comment="quick play">
+    <list default="true" id="586378f7-bb8b-4aa3-86c5-d3fc75f6db1c" name="Changes" comment="fixed saving">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI.java" afterDir="false" />
     </list>
@@ -26,11 +26,20 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectId" id="2GxLdcdHALQifGWH1aZpXzvDobe" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
+  }
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src" />
@@ -85,21 +94,42 @@
       <option name="project" value="LOCAL" />
       <updated>1669857670075</updated>
     </task>
-    <task id="LOCAL-00005" summary="edits">
-      <created>1669861965767</created>
+    <task id="LOCAL-00005" summary="game logic class">
+      <created>1669858240154</created>
       <option name="number" value="00005" />
       <option name="presentableId" value="LOCAL-00005" />
       <option name="project" value="LOCAL" />
-      <updated>1669861965767</updated>
+      <updated>1669858240154</updated>
     </task>
-    <task id="LOCAL-00006" summary="quick play">
-      <created>1669863844357</created>
+    <task id="LOCAL-00006" summary="expanded functionality of game logic class">
+      <created>1669860032847</created>
       <option name="number" value="00006" />
       <option name="presentableId" value="LOCAL-00006" />
       <option name="project" value="LOCAL" />
-      <updated>1669863844358</updated>
+      <updated>1669860032847</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="add button on create screen works">
+      <created>1669861898525</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1669861898525</updated>
+    </task>
+    <task id="LOCAL-00008" summary="add button on create screen now accommodates new layout">
+      <created>1669862461798</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1669862461798</updated>
+    </task>
+    <task id="LOCAL-00009" summary="fixed saving">
+      <created>1669862936550</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1669862936550</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -112,15 +142,17 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="delete idea" />
     <MESSAGE value="fix window sizing" />
     <MESSAGE value="add dialog box to open set" />
     <MESSAGE value="play screen reads back name of selected file" />
-    <MESSAGE value="edits" />
-    <MESSAGE value="quick play" />
-    <option name="LAST_COMMIT_MESSAGE" value="quick play" />
+    <MESSAGE value="game logic class" />
+    <MESSAGE value="expanded functionality of game logic class" />
+    <MESSAGE value="add button on create screen works" />
+    <MESSAGE value="add button on create screen now accommodates new layout" />
+    <MESSAGE value="fixed saving" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed saving" />
   </component>
 </project>

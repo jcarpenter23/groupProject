@@ -4,10 +4,13 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
+import java.io.IOException;
+import java.util.ArrayList;
 
 public class GUI {
     
     private static final String SETS_DIRECTORY = "sets";
+    private static final String CUSTOM_SET_FILE = SETS_DIRECTORY + "/custom.set";
 
     static class playButtonListener implements ActionListener {
         @Override
@@ -34,8 +37,26 @@ public class GUI {
     }
 
     static class createButtonListener implements ActionListener {
+        
+        private static QuestionSet customSet = new QuestionSet(new ArrayList<>());
         @Override
         public void actionPerformed(ActionEvent e) {
+            
+            File customSetFile = new File(CUSTOM_SET_FILE);
+            try {
+                //noinspection ResultOfMethodCallIgnored
+                customSetFile.createNewFile();
+            } catch (IOException ex) {
+                throw new RuntimeException(ex);
+            }
+    
+            try {
+                customSet = new QuestionSet(CUSTOM_SET_FILE);
+            } catch (IOException ex) {
+                throw new RuntimeException(ex);
+            }
+    
+    
             JFrame createArea = new JFrame("TRIVIA BOT - CREATE");
             createArea.setDefaultCloseOperation(createArea.DISPOSE_ON_CLOSE);
 
@@ -86,6 +107,7 @@ public class GUI {
 
             //button for text boxes
             JButton addQuestion = new JButton("ADD");
+            addQuestion.addActionListener(new AddQuestionButtonListener(categoryBox, questionsBox, correctanswersBox, wronganswersBox1, wronganswersBox2, wronganswersBox3));
             createArea.getContentPane().add(addQuestion);
 
 
@@ -93,6 +115,69 @@ public class GUI {
             createArea.setMinimumSize(createArea.getSize());
             createArea.setSize(300, 200);
             createArea.setVisible(true);
+        }
+        
+        public static void addToCustomSet(Question question) {
+            customSet.forceCreateQuestion(question);
+        }
+        
+        public static QuestionSet getCustomSet() {
+            return customSet;
+        }
+        
+        public static void saveCustomSet() {
+            try {
+                customSet.save();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+    
+    static class AddQuestionButtonListener implements ActionListener {
+        /*
+        private final JTextField categoryBox;
+        private final JTextField questionsBox;
+        private final JTextField correctanswersBox;
+        private final JTextField wronganswersBox1;
+        private final JTextField wronganswersBox2;
+        private final JTextField wronganswersBox3;
+        
+         */
+        private final ArrayList<JTextField> textFields;
+        
+        
+        public AddQuestionButtonListener(JTextField categoryBox, JTextField questionsBox, JTextField correctanswersBox, JTextField wronganswersBox1, JTextField wronganswersBox2, JTextField wronganswersBox3) {
+            textFields = new ArrayList<>() {
+                {
+                    add(categoryBox);
+                    add(questionsBox);
+                    add(correctanswersBox);
+                    add(wronganswersBox1);
+                    add(wronganswersBox2);
+                    add(wronganswersBox3);
+                }
+            };
+        }
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            String category = textFields.get(0).getText();
+            String questionText = textFields.get(1).getText();
+            
+            ArrayList<String> answers = new ArrayList<>() {
+                {
+                    for (int i = 2; i < 6; i++) {
+                        add(textFields.get(i).getText());
+                    }
+                }
+            };
+    
+            for (JTextField textField : textFields) {
+                textField.setText("");
+            }
+            
+            createButtonListener.addToCustomSet(new Question(questionText, answers, category));
+            createButtonListener.saveCustomSet();
         }
     }
 
